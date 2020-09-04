@@ -66,6 +66,7 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(0.001)
 
+
 def num()
 	for s in range(1):
 		angk = random.randint(111, 999)
