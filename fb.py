@@ -84,7 +84,7 @@ def tik():
 		print("\r\x1b[1;93mMohon Tunggu \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 
 
-def num()
+def num():
 	for s in range(1):
 		angk = random.randint(111, 999)
 		sys.stdout = open('.txt', 'a')
