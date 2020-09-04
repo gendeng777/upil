@@ -67,14 +67,6 @@ def jalan(z):
 		time.sleep(0.001)
 
 
-def num()
-	for s in range(1):
-		angk = random.randint(111, 999)
-		sys.stdout = open('.txt', 'a')
-		print(angk)
-		sys.stdout.flush()
-
-
 ##### LOGO #####
 logo = """\033[1;93m_/﹋\_          
 \033[1;34m(🌀🌀)\033[0m
@@ -90,6 +82,14 @@ def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\x1b[1;93mMohon Tunggu \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+
+
+def num()
+	for s in range(1):
+		angk = random.randint(111, 999)
+		sys.stdout = open('.txt', 'a')
+		print(angk)
+		sys.stdout.flush()
 
 
 back = 0
