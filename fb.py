@@ -66,6 +66,13 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(0.001)
 
+def num()
+	for s in range(1):
+		angk = random.randint(111, 999)
+		sys.stdout = open('.txt', 'a')
+		print(angk)
+		sys.stdout.flush()
+
 
 ##### LOGO #####
 logo = """\033[1;93m_/﹋\_          
