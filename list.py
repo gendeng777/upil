@@ -6,7 +6,6 @@ import cookielib
 import random
 import mechanize
 import os
-import system
 
 
 ##### LOGO #####
