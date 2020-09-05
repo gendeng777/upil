@@ -32,8 +32,8 @@ def get_one_random_lastname(nam):
 
 def random_fullname():
     for i in range(0,50):
-         one_lastname = str(get_one_random_lastname(nam)) 
-         print(firstname  +  one_lastname)
+         fullname = str(nam)
+         print(firstname  + " " + one_lastname)
 
 
 os.system('clear')
