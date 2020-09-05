@@ -4,7 +4,10 @@
 import sys
 import cookielib
 import random
-import mechaniza
+import mechanize
+import os
+import system
+
 
 ##### LOGO #####
 logo = """\033[1;93m_/﹋\_          
@@ -18,7 +21,9 @@ logo = """\033[1;93m_/﹋\_
 
 
 os.system('clear')
-logo
+print logo
+print
+print 42*"\033[1;96m="
 email = str(raw_input("\033[1;96m[+] \033[1;93mUsername/Email/No HP target \033[1;97m: ")
 passwordlist = str(raw_input("\033[1;96m[+] \033[193mTebak Passwod \033[1;97m: "))
 
