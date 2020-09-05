@@ -24,8 +24,9 @@ os.system('clear')
 print logo
 print
 print 42*"\033[1;96m="
-email = str(raw_input("\033[1;96m[+] \033[1;93mUsername/Email/No HP target \033[1;97m: ")
-passwordlist = str(raw_input("\033[1;96m[+] \033[1;93mWordlist \033[1;97m: ")
+email = str(raw_input("\033[1;96m[+] \033[1;93mUsername/Email/No HP target \033[1;97m: "))
+
+passwordlist = str(raw_input("\033[1;96m[+] \033[1;93mWordlist \033[1;97m: "))
 
 
 login = 'https://www.facebook.com/login.php?login_attempt=1'
