@@ -11,7 +11,7 @@ import os
 email = []
 id = []
 listpass = []
-
+username = []
 
 ##### LOGO #####
 logo = """\033[1;93m_/﹋\_          
