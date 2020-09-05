@@ -10,7 +10,7 @@ import os
 
 email = []
 id = []
-pw = []
+listpass = []
 
 
 ##### LOGO #####
@@ -108,7 +108,7 @@ def welcome():
 """
 	print wel 
 	print " [*] Account to crack : {}".format(email)
-	print " [*] Loaded :" , len(passwords)
+	print " [*] Loaded :" , len(listpass)
 	print " [*] Cracking, please wait ...\n\n"
 
 	
