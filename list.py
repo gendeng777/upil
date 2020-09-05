@@ -28,7 +28,7 @@ nam = ["khan", "Chowdhury", "Mahmood"]
 
 def random_fullname():
     for i in range(0,50):
-         lastname = str(0, (nam)-1))
+         lastname = str(0, (nam)-1)
          print(firstname  + " " + lastname)
 
 
