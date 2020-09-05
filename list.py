@@ -4,13 +4,12 @@
 import sys
 import cookielib
 import random
+import mechaniza
 
 
-
-
-email = str(raw_input("\033[1;96m[+] \033[1;93mTulis Username/Email/No HP target \033[1;97m: "))
-
-
+os.system('clear')
+logo
+email = str(raw_input("\033[1;96m[+] \033[1;93mUsername/Email/No HP target \033[1;97m: ")
 passwordlist = str(raw_input("\033[1;96m[+] \033[193mTebak Passwod \033[1;97m: "))
 
 
