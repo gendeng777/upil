@@ -8,7 +8,7 @@ import mechanize
 import os
 
 
-first_name = []
+firstname = []
 id = []
 listpass = []
 username = []
@@ -24,12 +24,24 @@ logo = """\033[1;93m_/﹋\_
 \033[1;31m╚════════════════════════════════════════╝\033[0m"""
 
 
+nam = ["khan", "Chowdhury"]
+
+
+def get_one_random_lastname(nam):
+        return nam[random.randint(0, len(nam)-1)]
+
+def random_fullname():
+    for i in range(0,50):
+         one_lastname = str(get_one_random_lastname(nam)) 
+         print(firstname + one_lastname)
+
+
 os.system('clear')
 print logo
 print
 print 42*"\033[1;96m="
-first_name = str(raw_input("\033[1;96m[+] \033[1;93mNama Depan FB \033[1;97m: "))
-
+firstname = str(raw_input("\033[1;96m[+] \033[1;93mNama Depan FB \033[1;97m: "))
+random_fullname()
 passwordlist = str(raw_input("\033[1;96m[+] \033[1;93mWordlist \033[1;97m: "))
 
 
