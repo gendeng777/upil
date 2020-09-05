@@ -8,6 +8,11 @@ import mechanize
 import os
 
 
+email = []
+id = []
+pw = []
+
+
 ##### LOGO #####
 logo = """\033[1;93m_/﹋\_          
 \033[1;34m(🌀🌀)\033[0m
