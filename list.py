@@ -8,7 +8,7 @@ import mechanize
 import os
 
 
-email = []
+first_name = []
 id = []
 listpass = []
 username = []
@@ -109,7 +109,7 @@ def welcome():
 +-----------------------------------------+\n\n
 """
 	print wel 
-	print " [*] Account to crack : {}".format(email)
+	print " [*] Account to crack : {}".format(first_name)
 	print " [*] Loaded :" , len(listpass)
 	print " [*] Cracking, please wait ...\n\n"
 
