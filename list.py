@@ -96,20 +96,19 @@ def search():
 		
 #welcome 
 def welcome():
-	wel = """
-        +=========================================+
-        |..........   Facebook Crack   ...........|
-        +-----------------------------------------+
-        |            #Author: UPIL FACEBOOK              | 
-        |	       Version 1.0                |
- 	|   https://github.com/aryhas             |
-        +=========================================+
-        |..........  Facebook Cracker  ...........|
-        +-----------------------------------------+\n\n
+	wel = """+=========================================+
+|..........   Facebook Crack   ...........|
++-----------------------------------------+
+|            #Author: UPIL FACEBOOK              | 
+|	       Version 1.0                |
+|   https://github.com/aryhas             |
++=========================================+
+|..........  Facebook Cracker  ...........|
++-----------------------------------------+\n\n
 """
 	print wel 
 	print " [*] Account to crack : {}".format(email)
-	print " [*] Loaded :" , len(total), "passwords"
+	print " [*] Loaded :" , len(passwords)
 	print " [*] Cracking, please wait ...\n\n"
 
 	
