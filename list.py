@@ -26,14 +26,9 @@ logo = """\033[1;93m_/﹋\_
 
 nam = ["khan", "Chowdhury", "Mahmood"]
 
-
-def get_one_random_lastname(nam):
-        return nam[random.randint(0, len(nam)-1)]
-
 def random_fullname():
     for i in range(0,50):
-         fullname = str(nam)
-         print(firstname  + " " + one_lastname)
+         print(firstname  + " " + nam)
 
 
 os.system('clear')
