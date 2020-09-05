@@ -6,8 +6,6 @@ import cookielib
 import random
 import mechanize
 import os
-from concurrent.futures import ThreadPoolExecutor
-
 
 
 email = []
@@ -74,7 +72,6 @@ def brute(password):
 			
 def search():
 	global password
-	with ThreadPoolExecutor(max_workers=30) as ex:
 		for user in username:
 			users = user.split('|')		
 			ss = users[0].split(' ')
