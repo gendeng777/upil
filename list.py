@@ -73,9 +73,9 @@ def brute(password):
 def search():
 	global password
 	with ThreadPoolExecutor(max_workers=30) as ex:
-	for user in username:
-		users = user.split('|')
-		ss = users[0].split(' ')
+		for user in username:
+			users = user.split('|')		
+			ss = users[0].split(' ')
 			for x in ss:
 				listpass = [
 					str(x) + '123',
