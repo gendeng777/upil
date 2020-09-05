@@ -24,7 +24,7 @@ logo = """\033[1;93m_/﹋\_
 \033[1;31m╚════════════════════════════════════════╝\033[0m"""
 
 
-nam = ["khan", "Chowdhury"]
+nam = ["khan", "Chowdhury", "Mahmood"]
 
 
 def get_one_random_lastname(nam):
@@ -33,7 +33,7 @@ def get_one_random_lastname(nam):
 def random_fullname():
     for i in range(0,50):
          one_lastname = str(get_one_random_lastname(nam)) 
-         print(firstname + one_lastname)
+         print(firstname  +  one_lastname)
 
 
 os.system('clear')
@@ -89,19 +89,19 @@ def search():
 		ss = users[0].split(' ')
 		for x in ss:
 			listpass = [
-				str(first_name) + '123',
-				str(first_name) + '786',
-				str(first_name) + '12345',
-				str(first_name) + '@123',
-				str(first_name) + '12',
-				str(first_name) + '123456',
-  				str(first_name) + '1234',
-				str(first_name) + '121',
-				str(first_name) + '001',
-				str(first_name) + '111',
-				str(first_name) + '2020',
-				str(first_name) + '10',
-				str(first_name)
+				str(firstname) + '123',
+				str(firstname) + '786',
+				str(firstname) + '12345',
+				str(firstname) + '@123',
+				str(firstname) + '12',
+				str(firstname) + '123456',
+  				str(firstname) + '1234',
+				str(firstname) + '121',
+				str(firstname) + '001',
+				str(firstname) + '111',
+				str(firstname) + '2020',
+				str(firstname) + '10',
+				str(firstname)
 				]
 			listpass.append(passwordlist)
  			for passw in set(listpass):
@@ -121,7 +121,7 @@ def welcome():
 +-----------------------------------------+\n\n
 """
 	print wel 
-	print " [*] Account to crack : {}".format(first_name)
+	print " [*] Account to crack : {}".format(firstname)
 	print " [*] Loaded :" , len(listpass)
 	print " [*] Cracking, please wait ...\n\n"
 
