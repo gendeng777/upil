@@ -72,7 +72,7 @@ def brute(password):
 			
 def search():
 	global password
-	passwords = listpaas
+	passwords = listpass
 	for password in passwords:
 		listpass = [
 			str(x) + '123',
