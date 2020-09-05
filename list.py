@@ -73,7 +73,7 @@ def brute(password):
 def search():
 	global password
 	passwords = open(listpass,"r")
-		for password in passwords:
+	for password in passwords:
 		listpass = [
 			str(x) + '123',
 			str(x) + '786',
