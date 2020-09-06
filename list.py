@@ -111,7 +111,7 @@ os.system('clear')
 print logo
 print
 print 42*"\033[1;96m="
-print("\033[1;96m[+] \033[1;93mNama Depan FB Target \033[1;97m: "))
+print("\033[1;96m[+] \033[1;93mNama Depan FB Target \033[1;97m: ")
 print 42*"\033[1;96m="
 		try:
 			firtname = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
