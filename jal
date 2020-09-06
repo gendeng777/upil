@@ -11,12 +11,8 @@ class bcolors:
 	FAIL = '\033[91m'
 	ENDC = '\033[0m'
 
-
-def bom():
-	os.system('clear')
-                       
-
 #Input
+os.system('clear')
 print(bcolors.WARNING + '''
 Choose a Mail Service:
 1) Gmail
@@ -25,10 +21,10 @@ Choose a Mail Service:
 ''' + bcolors.ENDC + '--------------------------------------------------------------')
 try:
 	server = raw_input(bcolors.OKGREEN + 'Mail Server: ' + bcolors.ENDC)
-	from = Facebook • security@facebookmail.com
-	to = raw_input(bcolors.OKGREEN + 'Emails : ' + bcolors.ENDC)
-	send = raw_input(bcolors.OKGREEN + 'Emails : ' + bcolors.ENDC)
-	
+	from = raw_input(bcolors.OKGREEN + 'Emails : ' + bcolors.ENDC)
+	to = Facebook • security@facebookmail.com
+	sub = rainput(bcolors.OKGREEN + 'Subyek : ' + bcolors.ENDC)
+	tt = raw_input(bcolors.OKGREEN + 'Tulis Emails : ' + bcolors.ENDC)
 
 except KeyboardInterrupt:
 	print bcolors.FAIL + '\nCanceled' + bcolors.ENDC
@@ -50,7 +46,7 @@ if server == '1' or server == 'gmail' or server == 'Gmail':
 		sys.exit()
 	no != nomes:
 		try:
-			server.sendmail(user, to, message)
+			server.sendmail(from, to, message)
 			print bcolors.WARNING + 'Successfully sent ' + str(no+1) + ' emails' + bcolors.ENDC
 			no += 1
 			time.sleep(.8)
@@ -74,11 +70,10 @@ elif server == '2' or server == 'Yahoo' or server == 'yahoo':
 		On Yahoo: https://login.yahoo.com/account/security?.scrumb=Tiby8TXUvJt#less-secure-apps
 		''' + bcolors.ENDC
 		sys.exit()
-	while no != nomes:
+	no != nomes:
 		try:
 			server.sendmail(user, to, message)
 			print bcolors.WARNING + 'Successfully sent ' + str(no + 1) + ' emails' + bcolors.ENDC
-			no += 1
 			time.sleep(.8)
 		except KeyboardInterrupt:
 			print bcolors.FAIL + '\nCanceled' + bcolors.ENDC
@@ -90,18 +85,11 @@ elif server == '2' or server == 'Yahoo' or server == 'yahoo':
 #Hotmail/Outlook
 elif server == '3' or server == 'outlook' or server == 'Outlook' or server == 'Hotmail' or server == 'hotmail':
 	server = smtplib.SMTP("smtp-mail.outlook.com", 587)
-	bom()
 	server.ehlo()
 	server.starttls()
 	try:
-		server.login(user, pwd)
-	except smtplib.SMTPAuthenticationError:
-		print bcolors.FAIL + 'Your Username or Password is incorrect, please try again using the correct credentials' + bcolors.ENDC
-		sys.exit()
-	while no != nomes:
-		try:
-			server.sendmail(user, to, message)
-			print bcolors.WARNING + 'Successfully sent ' + str(no + 1) + ' emails' + bcolors.ENDC
+		server.sendmail(user, to, sub, tt)
+		print bcolors.WARNING + 'Successfully sent ' + str(no + 1) + ' to' + bcolors.ENDC
 			no += 1
 			time.sleep(.8)
 		except KeyboardInterrupt:
