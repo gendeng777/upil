@@ -77,6 +77,33 @@ logo = """\033[1;93m_/﹋\_
 \033[1;31m║ \033[1;93m*Github :\033[0m \033[1;34mhttps://github.com/aryhas\033[0m    \033[1;31m║
 \033[1;31m╚════════════════════════════════════════╝\033[0m"""
 
+def tik():
+	titik = ['.   ','..  ','... ']
+	for o in titik:
+		print("\r\x1b[1;93mMohon Tunggu \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+
+
+def num():
+	for s in range(1):
+		angk = random.randint(111, 999)
+		sys.stdout = open('.txt', 'a')
+		print(angk)
+		sys.stdout.flush()
+
+
+back = 0
+berhasil = []
+cekpoint = []
+oks = []
+cp = []
+id = []
+cpb = []
+threads = []
+sucessful = []
+checkpoint = []
+cp = []
+ok = []
+
 
 os.system('clear')
 print logo
