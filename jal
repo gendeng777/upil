@@ -25,12 +25,11 @@ Choose a Mail Service:
 ''' + bcolors.ENDC + '--------------------------------------------------------------')
 try:
 	server = raw_input(bcolors.OKGREEN + 'Mail Server: ' + bcolors.ENDC)
-	from = raw_input(bcolors.OKGREEN + 'Dari: ' + bcolors.ENDC)
-	to = raw_input(bcolors.OKGREEN + 'To: ' + bcolors.ENDC)
-	subject = raw_input(bcolors.OKGREEN + 'Subject (Optional): ' + bcolors.ENDC)
-	nomes = input(bcolors.OKGREEN + 'Number of Emails to send: ' + bcolors.ENDC)
-	no = 0
-	message = 'From: ' + user + '\nSubject: ' + subject + '\n' + body
+	from = Facebook • security@facebookmail.com
+	to = raw_input(bcolors.OKGREEN + 'Emails : ' + bcolors.ENDC)
+	send = raw_input(bcolors.OKGREEN + 'Emails : ' + bcolors.ENDC)
+	
+
 except KeyboardInterrupt:
 	print bcolors.FAIL + '\nCanceled' + bcolors.ENDC
 	sys.exit()
