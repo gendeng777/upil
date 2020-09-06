@@ -5,7 +5,7 @@ nam = []
 os.system('rm -rf .txt')
 for n in range(2000):
 
-    user = random.randint(Hotmail, gmail, yahoo)
+    user = random.randint(hotmail, gmail, yahoo)
     
     sys.stdout = open('.txt', 'a')
 
