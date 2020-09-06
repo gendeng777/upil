@@ -102,14 +102,6 @@ def login():
 	print 42*"\033[1;96m="
 	try:
 		nama = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
-		idlist = ('.txt')
-		for line in open(idlist,"r").readlines():
-			id.append(line.strip())
-	except IOError:
-		print ("[!] File Not Found")
-		raw_input("\n[ Keluar ]")
-		login()
-
 
 			
 	xxx = str(len(id))
