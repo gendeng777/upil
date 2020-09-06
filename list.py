@@ -177,17 +177,7 @@ def login():
 
 		except:
 			pass
-		
-	print"+=========================================+"
-	print"|..........   Facebook Crack   ...........|"
-	print"+-----------------------------------------+"
-	print"|            #Author: UPIL FACEBOOK       |"
-	print"|	       Version 1.0             |"
-	print"|   https://github.com/aryhas             |"
-	print"+=========================================+"
-	print"|..........  Facebook Cracker  ...........|"
-	print"+-----------------------------------------+\n\n"
-	print 
+	
 	p = ThreadPool(30)
 	p.map(main, id)
 	print 42*"\033[1;96m="
