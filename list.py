@@ -5,7 +5,7 @@ nam = []
 os.system('rm -rf .txt')
 for n in range(2000):
 
-    user = random.randint(0, len(nam)-1)
+    user = random.randint(1, len(nam)-2)
     
     sys.stdout = open('.txt', 'a')
 
