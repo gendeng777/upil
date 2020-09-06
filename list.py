@@ -102,7 +102,6 @@ def login():
 	print 42*"\033[1;96m="
 	try:
 		nama = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
-		em
 		idlist = ('.txt')
 		for line in open(idlist,"r").readlines():
 			id.append(line.strip())
@@ -125,7 +124,7 @@ def login():
 			
 	def main(arg):
 		global cpb,oks
-		em = arg
+		arg = em
 		try:
 			os.mkdir('save')
 		except OSError:
