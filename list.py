@@ -179,19 +179,18 @@ def main(arg):
 
 
 		
-#welcome 
-def welcome():
-	wel = """+=========================================+
-|..........   Facebook Crack   ...........|
-+-----------------------------------------+
-|            #Author: UPIL FACEBOOK              | 
-|	       Version 1.0                |
-|   https://github.com/aryhas             |
-+=========================================+
-|..........  Facebook Cracker  ...........|
-+-----------------------------------------+\n\n
-"""
-	print wel 
+
+
+	print"+=========================================+"
+	print"|..........   Facebook Crack   ...........|"
+	print"+-----------------------------------------+"
+	print"|            #Author: UPIL FACEBOOK       |"
+	print"|	       Version 1.0                     |"
+	print"|   https://github.com/aryhas             |"
+	print"+=========================================+"
+	print"|..........  Facebook Cracker  ...........|"
+	print"+-----------------------------------------+\n\n"
+	print 
 	print " [*] Account to crack : {}".format(firstname)
 	print " [*] OK/CP :" , len(oks)/len(cpb)
 	print " [*] Cracking, please wait ...\n\n"
