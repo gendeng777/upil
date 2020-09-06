@@ -1,11 +1,11 @@
 #coding=utf-8
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
-nam = []
+dom = ["hotmail", "yahoo", "gmail"]
 os.system('rm -rf .txt')
 for n in range(2000):
 
-    user = random.randint(hotmail, gmail, yahoo)
+    user = random.randint(0, len(dom)-1)
     
     sys.stdout = open('.txt', 'a')
 
