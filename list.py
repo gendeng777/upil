@@ -113,20 +113,20 @@ print
 print 42*"\033[1;96m="
 print("\033[1;96m[+] \033[1;93mNama Depan FB Target \033[1;97m: ")
 print 42*"\033[1;96m="
-		try:
-			firtname = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
-			idlist = ('.txt')
-			for line in open(idlist,"r").readlines():
-				id.append(line.strip())
-		except IOError:
-			print ("[!] File Not Found")
-			raw_input("\n[ Back ]")
-			menu()
+try:
+	firtname = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
+	idlist = ('.txt')
+	for line in open(idlist,"r").readlines():
+		id.append(line.strip())
+except IOError:
+	print ("[!] File Not Found")
+	raw_input("\n[ Keluar ]")
+	keluar()
 
 
 			
 	xxx = str(len(id))
-	print ('\033[1;96m[✓] \033[1;93mTotal Nomor: \033[97m'+xxx)
+	print ('\033[1;96m[✓] \033[1;93mTotal Nama: \033[97m'+xxx)
 	time.sleep(0.1)
 	pass1 = raw_input("\033[1;96m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
