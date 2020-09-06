@@ -1,14 +1,15 @@
 #coding=utf-8
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
+nam = []
 os.system('rm -rf .txt')
 for n in range(2000):
 
-    nmbr = random.randint(1111111, 9999999)
+    user = random.randint(0, len(nam)-1)
     
     sys.stdout = open('.txt', 'a')
 
-    print(nmbr)
+    print(user)
 
     sys.stdout.flush()
     
@@ -180,7 +181,7 @@ def login():
 	print"|..........   Facebook Crack   ...........|"
 	print"+-----------------------------------------+"
 	print"|            #Author: UPIL FACEBOOK       |"
-	print"|	       Version 1.0                     |"
+	print"|	       Version 1.0             |"
 	print"|   https://github.com/aryhas             |"
 	print"+=========================================+"
 	print"|..........  Facebook Cracker  ...........|"
