@@ -194,8 +194,8 @@ def login():
 	print '\033[1;96m[✓] \033[1;93mTotal CP  : \033[1;97m'+str(len(cpb))
 	print('\033[1;96m[✓] \033[1;91mCP File Telah Disimpan : save/cp.txt')
 	raw_input('\033[1;96m[\033[1;97mKembali\033[1;96m]')
-	()
+	login()
 
 	
 if __name__ == '__main__':
-	main()
+	login()
