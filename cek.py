@@ -83,6 +83,13 @@ oks = []
 cpb = []
 
 
+
+##### LICENSE #####
+#=================#
+def lisensi():
+	os.system('clear')
+	nopes()
+####nopes#########
 def nopes():
 	os.system('clear')
 	print logo
