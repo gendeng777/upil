@@ -119,7 +119,7 @@ def login():
 			
 	def main(arg):
 		global cpb,oks
-		arg = em
+		em = arg
 		try:
 			os.mkdir('save')
 		except OSError:
