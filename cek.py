@@ -13,8 +13,8 @@ def login():
 	os.system('clear')
 	os.system('figlet CODE FB')
 	nom = raw_input("\033[1;93mNOMOR HP \033[1;97m: ")
-	for g in non(data):
-		id.append(id)
+	for x in nom(data):
+		id.append(len(id))
 
 
 def main(arg):
