@@ -22,8 +22,8 @@ numer = ["0", "1", "2", "3","4", "5", "6", "7", "8", "9", "10", "11", "12", "13"
 
 def get_one_random_kode(codlist):
         codlist = ('.txt')
-                for line in open(codlist,"r").readlines():
-                        cod.append(line.strip())
+        for line in open(codlist,"r").readlines():
+                cod.append(line.strip())
 
 def get_one_random_number(nom):
         return nom[random.randint(0, len(nom)-1)]
