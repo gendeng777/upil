@@ -16,7 +16,7 @@ def get_one_random_kode(cod):
 def cek():
     for i in range(0,1):
          one_kode = str(get_one_random_kode(cod))         
-         print(nom + " => "  + one_kode)
+         print(nom + " \033[1;31mCODE "  + one_kode)
 
 def main():                
     cek()
