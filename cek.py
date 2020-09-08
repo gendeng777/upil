@@ -8,11 +8,11 @@ import random
 os.system('rm -rf .txt')
 for n in range(1):
 
-    nmbr = random.randint(111111, 999999)
+    cod = random.randint(111111, 999999)
     
     sys.stdout = open('.txt', 'a')
 
-    print(nmbr)
+    print(cod)
 
     sys.stdout.flush()
 
@@ -45,5 +45,14 @@ def main():
 os.system('clear')
 os.system('figlet CEK FB')
 nom = raw_input("\033[1;93mNOMOR HP \033[1;97m: ")
+codlist = ('.txt')
+	for line in open(codlist,"r").readlines():
+		cod.append(line.strip())
+except IOError:
+	print ("[!] File Not Found")
+	raw_input("\n[ Back ]")
+	menu()
+
+
 if __name__=='__main__':
 	main()
