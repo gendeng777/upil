@@ -14,7 +14,7 @@ for n in range(1):
 
     print(cod)
 
-    sys.stdout.flus()
+    sys.stdout.flush()
 
 nom = []
 
