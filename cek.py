@@ -22,7 +22,7 @@ def main():
     cek()
 
 os.system('clear')
-os.system('figlet CEK CODE FB')
+os.system('figlet CODE FB')
 nom = raw_input("\033[1;93mNOMOR HP \033[1;97m: ")
 
 if __name__=='__main__':
