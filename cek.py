@@ -122,8 +122,8 @@ def nopes():
 		user = arg
 		try:
 			os.mkdir('save')
-			except OSError:
-				pass
+		except OSError:
+			pass
 		try:
 			pass1 = 786786
 			code = br.open('cod', 'a')
