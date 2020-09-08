@@ -31,7 +31,7 @@ def get_one_random_number(nom):
 def cek():
     for i in range(0,1):
          one_number = str(get_one_random_number(nom))
-         one_code = str(get_one_random_code(codlist))         
+         one_kode = str(get_one_random_kode(codlist))         
          print(nom + " => "  + codlist)
 
 def main():                
