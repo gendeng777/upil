@@ -14,14 +14,7 @@ for n in range(1):
 
     print(cod)
 
-    sys.stdout.flush()
-
-
-class bcolors:
-	OKGREEN = '\033[92m'
-	WARNING = '\033[93m'
-	FAIL = '\033[91m'
-	ENDC = '\033[0m'
+    sys.stdout.flus()
 
 nom = []
 
