@@ -32,7 +32,7 @@ def cek():
     for i in range(0,1):
          one_number = str(get_one_random_number(nom))
          one_kode = str(get_one_random_kode(cod))         
-         print(nom + " => "  + cod)
+         print(one_number + " => "  + one_kode)
 
 def main():                
     cek()
