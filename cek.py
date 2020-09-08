@@ -27,7 +27,6 @@ def get_one_random_kode(cod):
 
 def cek():
     for i in range(0,1):
-         nom = []
          one_kode = str(get_one_random_kode(cod))         
          print(nom + " => "  + one_kode)
 
