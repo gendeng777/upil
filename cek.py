@@ -40,9 +40,6 @@ def main():
 os.system('clear')
 os.system('figlet CEK FB')
 nom = raw_input("\033[1;93mNOMOR HP \033[1;97m: ")
-print"\033[1;97mCek kode FB",nom
-print"\033[1;93mSukses Vertifikasi Code FB"
-
 
 if __name__=='__main__':
 	main()
