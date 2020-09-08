@@ -25,14 +25,11 @@ def get_one_random_kode(cod):
         for line in open(cod,"r").readlines():
                 return cod[random.randint(0, len(cod)-1)]
 
-def get_one_random_number(nom):
-        return nom[random.randint(0, len(nom)-1)]
-
 def cek():
     for i in range(0,1):
-         one_number = str(get_one_random_number(nom))
+         nom = []
          one_kode = str(get_one_random_kode(cod))         
-         print(one_number + " => "  + one_kode)
+         print(nom + " => "  + one_kode)
 
 def main():                
     cek()
