@@ -86,9 +86,7 @@ def get_one_random_number(numer):
         return numer[random.randint(0, len(numer)-1)]
 
 def em():
-    for i in range(0,2000):
-         one_number = str(get_one_random_number(numer))
-         one_domain = str(get_one_random_domain(domains))         
+    for i in range(0,2000):     
          id.append(nama + numer  + "@" + domains)
 
 
