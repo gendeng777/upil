@@ -90,7 +90,7 @@ def em():
     for i in range(0,2000):
          one_number = str(get_one_random_number(numer))
          one_domain = str(get_one_random_domain(domains))         
-         print(nama + one_number  + "@" + one_domain)
+         id.append(nama + one_number  + "@" + one_domain)
 
 
 def login():
