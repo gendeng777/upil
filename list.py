@@ -107,7 +107,7 @@ def login():
 		raw_input("\n[ Back ]")
 		login()
 			
-	xxx = str(len(em))
+	xxx = str(len(id))
 	print ('\033[1;96m[✓] \033[1;93mTotal Email : \033[97m'+xxx)
 	time.sleep(0.1)
 	pass1 = raw_input("\033[1;96m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
