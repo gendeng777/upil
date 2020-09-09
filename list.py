@@ -9,7 +9,7 @@ os.system('rm -rf .txt')
 for n in range(2000):
 
     nmbr = random.randint(111, 999)
-    dom = str(domains)
+    dom = str.random(domains)
     sys.stdout = open('.txt', 'a')
 
     print(nmbr+"@"+dom)
