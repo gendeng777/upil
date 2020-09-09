@@ -1,7 +1,6 @@
 #coding=utf-8
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
-os.system('rm -rf .txt')
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
 from multiprocessing.pool import ThreadPool
