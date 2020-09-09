@@ -102,7 +102,8 @@ def login():
 	print 42*"\033[1;96m="
 	try:
 		nama = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
-		k = em()
+		for nama in em():
+			id.append(str(id))
 	except IOError:
 		print ("[!] File Not Found")
 		raw_input("\n[ Back ]")
