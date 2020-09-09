@@ -103,9 +103,6 @@ def login():
 	try:
 		user = raw_input("\033[1;96m[?] \033[1;93mMasukan Nama  \033[1;97m: ")
 		k="em"
-		idlist = ('.txt')
-		for line in open(idlist,"r").readlines():
-			id.append(line.strip())
 	except IOError:
 		print ("[!] File Not Found")
 		raw_input("\n[ Back ]")
