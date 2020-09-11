@@ -84,23 +84,20 @@ def tik():
 		print("\r\x1b[1;93mMohon Tunggu \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 
 
-class SMSBroadcastReceiver : BroadcastReceiver(){
+class SMSBroadcastReceiver:
 
-    private var otpReceiver : OTPReceiveListener? = null
+    otpReceiver.OTPReceiveListener = null
 
-    fun initOTPListener(receiver: OTPReceiveListener) {
+    def _init_OTPListener(receiver, OTPReceiveListener):
         this.otpReceiver = receiver
-    }
 
+    def override_fun_onReceive(context, intent):
+        if 'SmsRetriever.SMS_RETRIEVED_ACTION' in intent.action:
+            val_extras = intent.extras
+            val_status = extras.get(SmsRetriever.EXTRA_STATUS) as Status
 
-    override fun onReceive(context: Context, intent: Intent) {
-        if (SmsRetriever.SMS_RETRIEVED_ACTION == intent.action) {
-
-            val extras = intent.extras
-            val status = extras!!.get(SmsRetriever.EXTRA_STATUS) as Status
-
-            when (status.statusCode) {
-                CommonStatusCodes.SUCCESS -> {
+            if status.statusCode:
+                print('CommonStatusCodes.SUCCESS => {
 
                     // Get SMS message contents
                     var otp: String = extras.get(SmsRetriever.EXTRA_SMS_MESSAGE) as String
