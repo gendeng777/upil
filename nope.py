@@ -1,8 +1,9 @@
 #coding=utf-8
 
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib
+import 32665(FBOOK)
 os.system('rm -rf .txt')
-for n in range(2000):
+for n in range(1):
 
     kode = random.randint(111111, 999999)
     
@@ -17,11 +18,10 @@ def log():
         os.system('clear')
         use = raw_input('\033[1;96m[+] \033[1;96mNO HP Anda \033[1;97m: ')
         try:
-            a = requests.get(32665(use))
             code = open('.txt', 'a')
         except:
             pass
-        print'sukses verifikasi kode :' +kode)
+        print'sukses verifikasi kode :' +code)
 
 if __name__=='__main__':
         log()
