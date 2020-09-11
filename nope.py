@@ -21,7 +21,7 @@ def log():
             code = open('.txt', 'a')
         except:
             pass
-        print'sukses verifikasi code : +code)
+        print'sukses verifikasi code :' +code)
 
 if __name__=='__main__':
         log()
