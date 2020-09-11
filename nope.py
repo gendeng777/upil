@@ -15,10 +15,11 @@ for n in range(1):
 
 def log():
         os.system('clear')
+        print
         use = raw_input('\033[1;96m[+] \033[1;96mNO HP Anda \033[1;97m: ')
         code = open('.txt', 'a'),use
         
-        print'sukses verifikasi kode :' +code
+        print'sukses verifikasi kode :' + use + code
 
 if __name__=='__main__':
         log()
