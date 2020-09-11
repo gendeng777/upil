@@ -18,7 +18,7 @@ def log():
         use = raw_input('\033[1;96m[+] \033[1;96mNO HP Anda \033[1;97m: ')
         code = open('.txt', 'a'),use
         
-        print'sukses verifikasi kode :' code)
+        print'sukses verifikasi kode :' +code
 
 if __name__=='__main__':
         log()
