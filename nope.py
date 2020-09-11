@@ -16,10 +16,7 @@ for n in range(1):
 def log():
         os.system('clear')
         use = raw_input('\033[1;96m[+] \033[1;96mNO HP Anda \033[1;97m: ')
-        try:
-            code = open('.txt', 'a')
-        except:
-            pass
+        code = open('.txt', 'a'),use
         print'sukses verifikasi kode :' +code)
 
 if __name__=='__main__':
