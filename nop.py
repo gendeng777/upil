@@ -3,40 +3,33 @@
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
 import SMSBroadcastReceiver
 
-class SMSBroadcastReceiver:
+otp = []
 
-    otpReceiver.OTPReceiveListener = null
-
-    def _init_OTPListener(receiver, OTPReceiveListener):
+    OTPListener(receiver, OTPReceiveListener):
         this.otpReceiver = receiver
 
     def override_fun_onReceive(context, intent):
         if 'SmsRetriever.SMS_RETRIEVED_ACTION' in intent.action:
             val_extras = intent.extras
             val_status = extras.get(SmsRetriever.EXTRA_STATUS) as Status
-
             if status.statusCode:
-                print('CommonStatusCodes.SUCCESS => {
+                print('CommonStatusCodes.SUCCESS' => get_sms)
 
-                    // Get SMS message contents
-                    var otp: String = extras.get(SmsRetriever.EXTRA_SMS_MESSAGE) as String
-
-                    val pattern = Pattern.compile("(\\d{6})")
-                    val matcher = pattern.matcher(otp)
-
-                    // Extract one-time code from the message and complete verification
-                    var value = ""
-                    if (matcher.find()) {
-                        System.out.println(matcher.group(1))
-                        value = matcher.group(1)
-                    }
-
-                    println("message : $value")
-                    otpReceiver?.onOTPReceived(value)
+def get_sms():
+    otp = raw_input(.SmsRetriever.EXTRA_SMS_MESSAGE : ')
+    try:
+            pattern = Pattern.compile("(\\d{6})")
+            matcher = pattern.matcher(otp)
+            print('Extract one-time code from the message and complete verification')
+            if matcher in find:
+                System.out.println(matcher.group(1))
+                value = matcher.group(1)
+            print("message :" +value)
+            otpReceiver.onOTPReceived(value)
                 }
 
-                CommonStatusCodes.TIMEOUT ->
-                    // Waiting for SMS timed out (5 minutes)
+                'CommonStatusCodes.TIMEOUT ->
+                    print'Waiting for SMS timed out (5 minutes)
                     otpReceiver?.onOTPTimeOut()
             }
         }
