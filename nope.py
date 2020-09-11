@@ -1,7 +1,6 @@
 #coding=utf-8
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib
-import 32665(FBOOK)
 os.system('rm -rf .txt')
 for n in range(1):
 
