@@ -230,6 +230,7 @@ def nope():
 	print '\033[1;96m[1] \033[1;93mBangladesh'
 	print '\033[1;96m[2] \033[1;93mIndia'
 	print '\033[1;96m[3] \033[1;93mPakistan'
+	print '\033[1;96m[4] \033[1;93mBengali'
 	print '\033[1;96m[0] \033[1;31mKeluar            '
 	print 42*"\033[1;96m="
 	action()
@@ -286,6 +287,20 @@ def action():
 			print ("[!] File Not Found")
 			raw_input("\n[ Back ]")
 			menu()
+	elif bch =="4":								
+		os.system("clear")
+		print (logo)
+		print("\033[1;91m 14, 19") 
+		try:
+			c = raw_input(" Masukan Kode  : ")
+			k="+80"
+			idlist = ('.txt')
+			for line in open(idlist,"r").readlines():
+				id.append(line.strip())
+		except IOError:
+			print ("[!] File Not Found")
+			raw_input("\n[ Back ]")
+			menu() 
 				
 
 		
