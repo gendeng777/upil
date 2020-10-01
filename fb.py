@@ -239,7 +239,7 @@ def action():
 	elif bch =="1":
 		os.system("clear")
 		print (logo)
-		print("\033[1;97m175 177 188 191 192 193 194 195 196 197 198 199")
+		print("\033[1;97m163 175 177 184 188 189 191 192 193 194 195 196 197 198 199")
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
@@ -269,7 +269,7 @@ def action():
 	elif bch =="3":
 		os.system("clear")
 		print (logo)
-		print("300 302 304 306 308 312 325 336 345 540 554 547")
+		print("300 302 304 306 308 312 318 336 340 341 345 349 540 554 547")
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
