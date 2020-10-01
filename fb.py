@@ -269,7 +269,7 @@ def action():
 	elif bch =="3":
 		os.system("clear")
 		print (logo)
-		print("300 302 304 311 325 336 345 540 554 547")
+		print("300 302 304 306 308 311 325 336 345 540 554 547")
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
