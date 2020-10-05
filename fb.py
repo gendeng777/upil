@@ -491,6 +491,7 @@ def menu():
 	print "\033[1;96m[✓] \033[1;93mID   \033[1;91m: \033[1;92m"+id+"\033[1;97m"
 	print 42*"\033[1;96m="
 	print "\x1b[1;96m[1] \x1b[1;93m Hack FB MBF"
+	print "\x1b[1;96m[2] \x1b[1;93m informasi ttl"
 	print "\x1b[1;96m[0] \x1b[1;91m Keluar            "
 	pilih()
 
@@ -502,6 +503,8 @@ def pilih():
 		pilih()
 	elif unikers =="1":
 		mbf()
+	elif unikers =="2":
+		ttl()
 	elif unikers =="0":
 		jalan('Menghapus token')
 		os.system('rm -rf login.txt')
@@ -509,6 +512,18 @@ def pilih():
 	else:
 		print "\033[1;96m[!] \x1b[1;91mIsi yang benar"
 		pilih()
+
+
+def ttl():
+	os.system('clear')
+	print 42*"\033[1;96m="
+	idt = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")		
+	try:
+		toket = open("login.txt", 'r')
+		jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+		z = json.loads(jok.text)
+		print '\033[1;91m[☆] \033[1;92mDate of birth\033[1;91m : '+z['birthday']
+	except KeyError: print '\033[1;91m[?] \033[1;92mDate of birth\033[1;97m : \033[1;91mNot found'
 
 
 def mbf():
