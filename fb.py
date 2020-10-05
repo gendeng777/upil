@@ -516,14 +516,36 @@ def pilih():
 
 def ttl():
 	os.system('clear')
-	print 42*"\033[1;96m="
-	idt = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")		
-	try:
-		toket = open("login.txt", 'r')
-		jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-		z = json.loads(jok.text)
-		print '\033[1;91m[☆] \033[1;92mDate of birth\033[1;91m : '+z['birthday']
-	except KeyError: print '\033[1;91m[?] \033[1;92mDate of birth\033[1;97m : \033[1;91mNot found'
+	aid = raw_input('\033[1;91m[+] \033[1;92mEnter ID\033[1;97m/\033[1;92mName\033[1;91m : \033[1;97m')
+	jalan('\033[1;91m[✺] \033[1;92mWait a minute \033[1;97m...')
+	r = requests.get('https://graph.facebook.com/me/friends?access_token='+toket)
+	cok = json.loads(r.text)
+	for i in cok['data']:
+		if aid in i['name'] or aid in i['id']:
+			x = requests.get("https://graph.facebook.com/"+i['id']+"?access_token="+toket)
+			z = json.loads(x.text)
+			print 42*"\033[1;97m♡"
+			try:
+				print '\033[1;91m[☆] \033[1;92mName\033[1;95m          : '+z['name']
+			except KeyError: print '\033[1;91m[?] \033[1;92mName\033[1;97m          : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[☆] \033[1;92mID\033[1;97m            : '+z['id']
+			except KeyError: print '\033[1;91m[?] \033[1;92mID\033[1;92m            : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[☆] \033[1;92mEmail\033[1;97m         : '+z['email']
+			except KeyError: print '\033[1;91m[?] \033[1;92mEmail\033[1;96m         : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[☆] \033[1;92mTelephone\033[1;95m     : '+z['mobile_phone']
+			except KeyError: print '\033[1;91m[?] \033[1;92mTelephone\033[1;97m     : \033[1;91mNot found'
+			try:
+				print '\033[1;91m[☆] \033[1;92mDate of birth\033[1;91m : '+z['birthday']
+			except KeyError: print '\033[1;91m[?] \033[1;92mDate of birth\033[1;97m : \033[1;91mNot found'
+		else:
+			pass
+	else:
+		print"\033[1;91m[✖] User not found"
+		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
+		menu()
 
 
 def mbf():
