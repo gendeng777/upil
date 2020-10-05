@@ -602,6 +602,8 @@ def pilih_mbf():
 			print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
 			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
 			mbf()
+			print '\033[1;91m[☆] \033[1;92mDate of birth\033[1;91m : '+z['birthday']
+		except KeyError: print '\033[1;91m[?] \033[1;92mDate of birth\033[1;97m : \033[1;91mNot found'
 		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
