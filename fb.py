@@ -516,6 +516,14 @@ def pilih():
 
 def ttl():
 	os.system('clear')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		os.system('clear')
+		print"\033[1;96m[!] \x1b[1;91mToken invalid"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
 	aid = raw_input('\033[1;91m[+] \033[1;92mEnter ID\033[1;97m/\033[1;92mName\033[1;91m : \033[1;97m')
 	jalan('\033[1;91m[✺] \033[1;92mWait a minute \033[1;97m...')
 	r = requests.get('https://graph.facebook.com/me/friends?access_token='+toket)
