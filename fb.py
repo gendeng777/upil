@@ -283,7 +283,7 @@ def action():
 	elif bch =="4":
 		os.system("clear")
 		print (logo)
-		print("15" "16" "17" "18" "19" "20" "112" "115)
+		print("15" "16" "17" "18" "19" "20" "112" "115")
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
