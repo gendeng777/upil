@@ -224,7 +224,7 @@ def nope():
 	print '\033[1;96m[1] \033[1;93mBangladesh'
 	print '\033[1;96m[2] \033[1;93mIndia'
 	print '\033[1;96m[3] \033[1;93mPakistan'
-	print '\033[1;96m[3] \033[1;93mMalaysia'
+	print '\033[1;96m[4] \033[1;93mMalaysia'
 	print '\033[1;96m[0] \033[1;31mKeluar            '
 	print 42*"\033[1;96m="
 	action()
