@@ -224,6 +224,7 @@ def nope():
 	print '\033[1;96m[1] \033[1;93mBangladesh'
 	print '\033[1;96m[2] \033[1;93mIndia'
 	print '\033[1;96m[3] \033[1;93mPakistan'
+	print '\033[1;96m[3] \033[1;93mMalaysia'
 	print '\033[1;96m[0] \033[1;31mKeluar            '
 	print 42*"\033[1;96m="
 	action()
@@ -283,7 +284,7 @@ def action():
 	elif bch =="4":
 		os.system("clear")
 		print (logo)
-		print("15" "16" "17" "18" "19" "20" "112" "115")
+		print("15 16 17 18 19 20 112 115")
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
