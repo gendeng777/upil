@@ -88,6 +88,7 @@ back = 0
 berhasil = []
 threads = []
 gagal = []
+idlist = []
 cekpoint = []
 oks = []
 cp = []
@@ -543,7 +544,7 @@ def crack():
 	except IOError:
 		print ("\033[1;91m[!] File not found")
 		raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
-		menu_hack()
+		menu()
 		
 def scrak():
 	global berhasil,cekpoint,gagal,back,up
