@@ -503,7 +503,7 @@ def pilih():
 		pilih()
 	elif unikers =="1":
 		mbf()
-	elif unikers =="1":
+	elif unikers =="2":
 		crack()
 		hasil()
 	elif unikers =="0":
