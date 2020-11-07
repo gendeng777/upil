@@ -86,6 +86,8 @@ def tik():
 
 back = 0
 berhasil = []
+threads = []
+gagal = []
 cekpoint = []
 oks = []
 cp = []
