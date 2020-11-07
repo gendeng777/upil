@@ -1,12 +1,12 @@
 #coding=utf-8
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
-os.system('rm -rf .txt')
+os.system('rm -rf login.txt')
 for n in range(2000):
 
     nmbr = random.randint(1111111, 9999999)
     
-    sys.stdout = open('.txt', 'a')
+    sys.stdout = open('login.txt', 'a')
 
     print(nmbr)
 
@@ -242,8 +242,8 @@ def action():
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
-			k="+880"
-			idlist = ('.txt')
+			k="10000"
+			idlist = ('login.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
 		except IOError:
@@ -257,8 +257,8 @@ def action():
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
-			k="+91"
-			idlist = ('.txt')
+			k="10001"
+			idlist = ('login.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
 		except IOError:
@@ -272,8 +272,8 @@ def action():
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
-			k="+92"
-			idlist = ('.txt')
+			k="6"
+			idlist = ('login.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
 		except IOError:
@@ -287,8 +287,8 @@ def action():
 		print 42*"\033[1;96m="
 		try:
 			c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
-			k="+60"
-			idlist = ('.txt')
+			k="1"
+			idlist = ('login.txt')
 			for line in open(idlist,"r").readlines():
 				id.append(line.strip())
 		except IOError:
