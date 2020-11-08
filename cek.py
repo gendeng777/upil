@@ -155,6 +155,20 @@ def login():
 		time.sleep(1)
 		login()
 
+
+def main():
+	print '[1] mulai'
+	print '[2] keluar'
+	option = input('==>')
+	if option == 1:
+		code_txt = raw_input('code file :')
+	else:
+		system('clear')
+		exit()
+	code_txt = open('code.txt','r')
+	code_list = pass_file.readlines()
+
+
 def code():
 	i = 0
 	os.system('clear')
@@ -194,17 +208,6 @@ def code():
 				print '[!] Code not found => ' + telok
 				login()
 
-def main():
-	print '[1] mulai'
-	print '[2] keluar'
-	option = input('==>')
-	if option == 1:
-		code_txt = raw_input('code file :')
-	else:
-		system('clear')
-		exit()
-	code_txt = open('code.txt','r')
-	code_list = pass_file.readlines()
 
 if __name__=='__main__':
 	code()
