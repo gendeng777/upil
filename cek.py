@@ -79,7 +79,7 @@ def tik():
 
 id = []
 code = []
-FBOOK =
+FBOOK = []
 
 
 ##### LICENSE #####
