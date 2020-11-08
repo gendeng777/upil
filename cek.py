@@ -155,6 +155,17 @@ def login():
 
 def code():
 
+def main()
+	print '[1] mulai'
+	print '[2] keluar'
+	option = input('==>')
+	if option == 1:
+		code.txt = raw_input('path of passwords file :')
+	else:
+		system('clear')
+		exit()
+	code_file = open(code.txt,'r')
+	code_list = pass_file.readlines()
 
 if __name__=='__main__':
 	code()
