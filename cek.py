@@ -79,7 +79,7 @@ def tik():
 
 id = []
 code = []
-FBOOK = []
+msg = []
 
 
 ##### LICENSE #####
@@ -166,8 +166,8 @@ def code():
                 time.sleep(0.05)
 		print logo
 		print("\033[1;93mKonfirmasi Code Email Anda")
-		codem = raw_input('Email :')
-		msg = 32665(FBOOK)
+		codem = raw_input("\033[1;34mEmail : ")
+		msg = raw_inpit("\033[1;31m Server FACEBOOK : ")
 		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 		server.ehlo()
 		for code in code_list:
