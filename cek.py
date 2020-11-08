@@ -149,13 +149,16 @@ def login():
 def code():
 	i = 0
 	codem = raw_input('Email :')
+	msg = 32665(FBOOK)
 	server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 	server.ehlo()
 	for code in code_list:
 		i = i + 1
 		print str(i) + '/' + str(len(code_list))
 		try:
-			server.login(codem, 'r')
+			v = server.login(codem, msg)
+			s = json.loadd(v,text)
+			telok = open('code.txt', 'r')
 			system('clear')
 			main()
 			print '\n'
@@ -170,18 +173,18 @@ def code():
 
 			break
 		else:
-			print '[!] Code not found => ' + code
+			print '[!] Code not found => ' + code + '
 			login()
 def main()
 	print '[1] mulai'
 	print '[2] keluar'
 	option = input('==>')
 	if option == 1:
-		code.txt = raw_input('code file :')
+		code_txt = raw_input('code file :')
 	else:
 		system('clear')
 		exit()
-	code_file = open(&code.txt_,'r')
+	code_txt = open('code.txt','r')
 	code_list = pass_file.readlines()
 
 if __name__=='__main__':
