@@ -138,8 +138,9 @@ def login():
 		if 'checkpoint' in url:
 			print("\n\x1b[1;97mSepertinya Akun Anda Terkena Checkpoint")
 			os.system('rm -rf login.txt')
+			lanjut = raw_input("\003[1;31mLanjutkan Untuk Konfirmasi Akun CP : ")
 			time.sleep(1)
-			code()
+			
 		else:
 			print("\n\x1b[1;93mPassword/Email Anda Salah")
 			os.system('rm -rf login.txt')
