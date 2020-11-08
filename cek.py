@@ -171,18 +171,18 @@ def code():
 				system('clear')
 				main()
 				print '\n'
-				print '[+] This Account Has Been Hacked code :' + telok + '
+				print '[+] This Account Has Been Hacked code :' + telok
 				break
 			except smtplib.SMTPAuthenticationError as e:
 				error = str(e)
 			if error[14] == '<':
 				system('clear')
 				main()
-				print '[+] this account has been hacked, code :' + telok + '
+				print '[+] this account has been hacked, code :' + telok
 
 				break
 			else:
-				print '[!] Code not found => ' + telok + '
+				print '[!] Code not found => ' + telok
 				login()
 
 def main()
