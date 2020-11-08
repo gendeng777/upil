@@ -80,6 +80,7 @@ def tik():
 id = []
 code = []
 msg = []
+code_list = []
 
 
 ##### LICENSE #####
