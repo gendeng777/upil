@@ -185,7 +185,7 @@ def code():
 				print '[!] Code not found => ' + telok
 				login()
 
-def main()
+def main():
 	print '[1] mulai'
 	print '[2] keluar'
 	option = input('==>')
