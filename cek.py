@@ -139,6 +139,8 @@ def login():
 			print("\n\x1b[1;97mSepertinya Akun Anda Terkena Checkpoint")
 			os.system('rm -rf login.txt')
 			lanjut = raw_input("\003[1;31mLanjutkan Untuk Konfirmasi Akun CP : ")
+			if lanjut == ""
+			
 			time.sleep(1)
 			
 		else:
