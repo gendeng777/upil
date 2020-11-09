@@ -693,7 +693,7 @@ def pilih_mbf():
 			else:
 				if 'www.facebook.com' in q["error_msg"]:
 					print '\033[1;96m| \033[1;97mNM \033[1;96m|\033[1;31m '+b['name']
-					print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass1
+					print '\x1b[1;96m| \x1b[1;93mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass1
 					print '\033[1;96m| \033[1;31mTL \033[1;96m|\033[1;93m '+b['birthday']
 					cek = open("out/mbf_cp.txt", "a")
 					cek.write(user+"|"+pass1+"\n")
@@ -711,7 +711,7 @@ def pilih_mbf():
 					else:
 						if 'www.facebook.com' in q["error_msg"]:
 							print '\033[1;96m| \033[1;97mNM \033[1;96m|\033[1;31m '+b['name']
-							print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass2
+							print '\x1b[1;96m| \x1b[1;93mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass2
 							print '\033[1;96m| \033[1;31mTL \033[1;96m|\033[1;93m '+b['birthday']
 							cek = open("out/mbf_cp.txt", "a")
 							cek.write(user+"|"+pass2+"\n")
