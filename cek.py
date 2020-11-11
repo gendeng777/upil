@@ -182,14 +182,14 @@ def code():
 		print logo
 		print("\033[1;93mKonfirmasi Code Email account CP")
 		codem = raw_input("\033[1;34mEmail : ")
-		from = requests.get("smtp.security@facebookmail.com")
+		messeg = smtplib.SMTP('security@facebookmail.com')
 		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 		server.ehlo()
 		for code in code_list:
 			i = i + 1
 			print str(i) + '/' + str(len(code_list))
 			try:
-				v = server.messege(codem, from)
+				v = server.email(codem, messeg)
 				s = json.loadd(v,text)
 				telok = open('code.txt', 'r')
 				system('clear')
