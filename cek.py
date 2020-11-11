@@ -4,7 +4,7 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,ge
 os.system('rm -rf .txt')
 for n in range(2000):
 
-    nmbr = random.randint(1111111, 9999999)
+    nmbr = random.randint(11111111, 99999999)
     
     sys.stdout = open('code.txt', 'a')
 
@@ -98,8 +98,6 @@ def login():
         os.system('clear')
         time.sleep(0.05)
         print logo
-        jalan('\033[1;96m[!] \x1b[1;34mJangan Menggunakan akun fb lama' )
-	jalan('\033[1;96m[!] \x1b[1;34mGunakan akun baru/via token' )
 	print 42*"\033[1;96m="
 	id = raw_input('\033[1;96m[!] \x1b[0;34mID/Email \x1b[1;91m: \x1b[1;92m')
 	pwd = raw_input('\033[1;96m[!] \x1b[0;34mPassword \x1b[1;91m: \x1b[1;92m')
