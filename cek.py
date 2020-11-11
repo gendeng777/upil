@@ -1,6 +1,6 @@
 #coding=utf-8
 
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass,smtplib,messege
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass,smtplib
 os.system('rm -rf .txt')
 for n in range(2000):
 
@@ -24,7 +24,7 @@ except ImportError:
     time.sleep(1)
     os.system('python2 upil.py')
 
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize,smtplib,messege
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize,smtplib
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
