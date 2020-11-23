@@ -29,7 +29,7 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,ge
 os.system('rm -rf .txt')
 for n in range(1000):
 
-    nmbr = random.randint(0, 99999999999)
+    nmbr = random.randint(0, 9999999999)
     
     sys.stdout = open('...txt', 'a')
 
@@ -783,9 +783,9 @@ def crack_ident():
     os.system('clear')
     print logo
     try:
-        print '\033[1;96m[+] \033[1;93mContoh : 1000 10000 100000 14 15'
+        print '\033[1;96m[+] \033[1;93mContoh : 10001 10002 10003 10000 100000'
         raw_input('\033[1;96m[+] \x1b[1;34mID Target : \033[1;31m ')
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mjembot'
         pass1 = raw_input('\033[1;96m[+] \033[1;93mPassword1 : \033[1;31m ')
         pass2 = raw_input('\033[1;96m[+] \033[1;93mPassword2 : \033[1;31m ')
         pass3 = raw_input('\033[1;96m[+] \033[1;93mPassword3 : \033[1;31m ')
