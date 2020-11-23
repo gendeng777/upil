@@ -29,9 +29,9 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,ge
 os.system('rm -rf .txt')
 for n in range(1000):
 
-    nmbr = random.randint(0, len(nmbr)-999)
+    nmbr = random.randint(111, 999)
     
-    sys.stdout = open('..txt', 'a')
+    sys.stdout = open('...txt', 'a')
 
     print(nmbr)
 
@@ -49,6 +49,37 @@ except ImportError:
     time.sleep(1)
     os.system('python2 upil.py')
 
+
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
+os.system('rm -rf .txt')
+num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+nom = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+def get_anu(nom):
+    return nom[random.randint(0, Len(nom)-1)]
+def get_anm(num):
+    return nom[random.randint(0, Len(num)-1)]
+    for n in range(1000):
+        anu = str(get_anu(nom)
+        anm = str(get_anm(num)
+        nmbr = (anu + anm)
+    
+        sys.stdout = open('..txt', 'a')
+
+        print(nmbr)
+
+        sys.stdout.flush()
+    
+    try:
+        import requests
+    except ImportError:
+        os.system('pip2 install requests')
+    
+    try:
+        import mechanize
+    except ImportError:
+        os.system('pip2 install mechanize')
+        time.sleep(1)
+        os.system('python2 upil.py')
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
 from multiprocessing.pool import ThreadPool
