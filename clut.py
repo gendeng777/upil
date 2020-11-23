@@ -24,6 +24,32 @@ except ImportError:
     time.sleep(1)
     os.system('python2 upil.py')
 
+
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
+os.system('rm -rf .txt')
+for n in range(2000):
+
+    nmbr = random.randint(111, 999)
+    
+    sys.stdout = open('..txt', 'a')
+
+    print(nmbr)
+
+    sys.stdout.flush()
+    
+try:
+    import requests
+except ImportError:
+    os.system('pip2 install requests')
+    
+try:
+    import mechanize
+except ImportError:
+    os.system('pip2 install mechanize')
+    time.sleep(1)
+    os.system('python2 upil.py')
+
+
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
@@ -583,7 +609,7 @@ def crack_email():
     print '\033[1;96m[✓] \x1b[1;97mCP/OK tersimpan : save/email.txt'
     print 42*"\033[1;96m="
     raw_input('\x1b[1;97m[\x1b[1;92m KEMBALI \x1b[1;97m]')
-    os.system('python2 clut.py')
+    os.system('python2 upil.py')
 
 
 def menu():
