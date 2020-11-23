@@ -62,8 +62,8 @@ def angk():
     for n in range(1000):
         anu = str(get_anu(nom))
         anm = str(get_anm(num))
+        sys.stdout = open('..txt', 'a')
         print(anu + anm)
-
         sys.stdout.flush()
     
     try:
@@ -519,7 +519,7 @@ def crack_email():
         pass3 = raw_input('\033[1;96m[+] \033[1;93mPassword3 : \033[1;31m ')
         pass4 = raw_input('\033[1;96m[+] \033[1;93mPassword4 : \033[1;31m ')
         pass5 = raw_input('\033[1;96m[+] \033[1;93mPassword5 : \033[1;31m ')
-        idlist = open(angk)
+        idlist = '..txt'
         for line in open(idlist, 'r').readlines():
             id.append(line.strip())
 
