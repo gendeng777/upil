@@ -58,12 +58,11 @@ def get_anu(nom):
     return nom[random.randint(0, Len(nom)-1)]
 def get_anm(num):
     return nom[random.randint(0, Len(num)-1)]
+def angk():
     for n in range(1000):
-        nmbr = str(nom, num)
-    
-        sys.stdout = open('..txt', 'a')
-
-        print(nmbr)
+        anu = str(get_anu(nom))
+        anm = str(get_anm(num))
+        print(anu + anm)
 
         sys.stdout.flush()
     
@@ -520,7 +519,7 @@ def crack_email():
         pass3 = raw_input('\033[1;96m[+] \033[1;93mPassword3 : \033[1;31m ')
         pass4 = raw_input('\033[1;96m[+] \033[1;93mPassword4 : \033[1;31m ')
         pass5 = raw_input('\033[1;96m[+] \033[1;93mPassword5 : \033[1;31m ')
-        idlist = '..txt'
+        idlist = open(angk)
         for line in open(idlist, 'r').readlines():
             id.append(line.strip())
 
