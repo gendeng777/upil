@@ -59,9 +59,8 @@ def get_anu(nom):
 def get_anm(num):
     return nom[random.randint(0, Len(num)-1)]
     for n in range(1000):
-        anu = str(get_anu(nom)
+        anu = str(get_anu(nom, num)
 
-        anm = str(get_anm(num)
         nmbr = (anu + anm)
     
         sys.stdout = open('..txt', 'a')
