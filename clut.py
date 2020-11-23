@@ -52,7 +52,7 @@ except ImportError:
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
 os.system('rm -rf .txt')
-for n in range(1000):
+for n in range(3000):
 
     nmbr = random.randint(0, 999)
     
