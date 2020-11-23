@@ -781,9 +781,9 @@ def crack_ident():
     os.system('clear')
     print logo
     try:
-        print '\033[1;96m[+] \033[1;93mContoh : 10001 10002 10003 10000 100000'
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;96m 1 2 3 4 dst 😂'
         c = raw_input('\033[1;96m[+] \x1b[1;34mID Target : \033[1;31m ')
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mjembot'
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;96m123456 qwerty jembot dst 😂'
         pass1 = raw_input('\033[1;96m[+] \033[1;93mPassword1 : \033[1;31m ')
         pass2 = raw_input('\033[1;96m[+] \033[1;93mPassword2 : \033[1;31m ')
         pass3 = raw_input('\033[1;96m[+] \033[1;93mPassword3 : \033[1;31m ')
