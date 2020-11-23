@@ -166,9 +166,11 @@ def login():
 	time.sleep(0.05)
 	print "\033[1;96m[2] \033[1;93mCrack FB Email tanpa login fb  "
 	time.sleep(0.05)
-	print "\033[1;96m[3] \033[1;93mLogin Akun Facebook  "
+	print "\033[1;96m[3] \033[1;93mCrack FB User Name tanpa login fb  "
+	time.sleep(0.05)
+	print "\033[1;96m[4] \033[1;93mLogin Akun Facebook  "
         time.sleep(0.05)
-        print "\033[1;96m[4] \033[1;93mLogin Akun Facebook Pakai Acces token "
+        print "\033[1;96m[5] \033[1;93mLogin Akun Facebook Pakai Acces token "
 	time.sleep(0.05)
 	print "\033[1;96m[0] \033[1;97mKeluar        "
 	print 42*"\033[1;96m="
@@ -184,8 +186,10 @@ def pilih_login():
 	elif peak =="2":
 		crack_email()
 	elif peak =="3":
+		crack_nam()
+	elif peak =="4":
 		login1()
-        elif peak =="4":
+        elif peak =="5":
 	        tokenz()
 	elif unikers =="0":
 		os.system('rm -rf login.txt')
