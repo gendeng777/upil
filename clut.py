@@ -663,7 +663,7 @@ def crack_nam():
         menu()
 
     xxx = str(len(id))
-    jalan('\033[1;96m[+]\x1b[1;93mTotal Email \x1b[1;97m:\x1b[1;92m ' + xxx)
+    jalan('\033[1;96m[+]\x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
     time.sleep(1)
     jalan("\033[1;96m[!] \x1b[1;93mJangan Keluar")
     time.sleep(1)
@@ -675,7 +675,7 @@ def crack_nam():
     print
     print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
     print 42*"\033[1;96m="
-    print "\033[96m| 😎 | " + 5*" " + "\033[35mUSERN" + 8*" " + "\033[96m|" + 5*" " + "\033[33mPassword" + 4*" " + "\033[96m"
+    print "\033[96m| 😎 | " + 4*" " + "\033[35mUSER NAME" + 7*" " + "\033[96m|" + 4*" " + "\033[33mPassword" + 3*" " + "\033[96m"
     print 42*"\033[1;96m="
 
 
