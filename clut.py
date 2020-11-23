@@ -783,7 +783,7 @@ def crack_ident():
     try:
         print '\033[1;96m[+] \033[1;93mContoh angka depan : \033[1;96m 10 11 12 13 14 dst 😂'
         c = raw_input('\033[1;96m[+] \x1b[1;34mID depan : \033[1;31m ')
-        print _\033[1;96[+] \033[1;93Contoh angka belakang : \033[1;96m 10 20 30 40 50 dst 😂'
+        print '\033[1;96[+] \033[1;93Contoh angka belakang : \033[1;96m 10 20 30 40 50 dst 😂'
         k = raw_input('\033[1;96m[+] \x1b[1;34mID belakang : \033[1;31m ')
         print '\033[1;96m[+] \033[1;93mContoh password : \033[1;96m123456 qwerty jembot dst 😂'
         pass1 = raw_input('\033[1;96m[+] \033[1;93mPassword1 : \033[1;31m ')
