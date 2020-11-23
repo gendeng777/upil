@@ -56,6 +56,7 @@ num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 nom = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
 def get_anu(nom):
     return nom[random.randint(0, Len(nom)-1)]
+
 def get_anm(num):
     return nom[random.randint(0, Len(num)-1)]
     for n in range(1000):
