@@ -169,7 +169,7 @@ def login():
 	time.sleep(0.05)
 	print "\033[1;96m[3] \033[1;93mCrack FB \033[1;93mUser Name \033[1;93mTanpa login fb  "
 	time.sleep(0.05)
-	print "\033[1;96m[4] \033[1;93mCrack FB \033[1;93mUser ID \033[1;93mTanpa login fb  "
+	print "\033[1;96m[4] \033[1;93mCrack FB \033[1;93mUser ID \033[1;93mTanpa login fb => \033[1;31mJgn Di Coba Karena masih Sulit "
 	time.sleep(0.05)
 	print "\033[1;96m[5] \033[1;93mLogin Akun Facebook  "
         time.sleep(0.05)
@@ -688,7 +688,7 @@ def crack_ident():
     print 42*"\033[1;96m="
     try:
         print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;97m 1000001 1000002 1000012 dst'
-        print '\033[1;96m[+] \033[1;97mKHUSUS 15digit...semoga beruntung!!!!!'
+        print '\033[1;96m[+] \033[1;97mKHUSUS 15digit & 10digit'
         c = raw_input('\033[1;96m[+] \x1b[1;93mID Depan : \033[1;31m ')
         print '\033[1;96m[+] \033[1;93mContoh password : \033[1;97msayang jembot dst'
         pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
@@ -715,6 +715,7 @@ def crack_ident():
         time.sleep(1)
     print
     print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
+    print('\x1b[1;96m[!] \x1b[1;97mJangan Di Coba Krn masih sulit')
     print 42*"\033[1;96m="
     print "\033[96m| 😎 | " + 3*" " + "\033[35mIdentitas" + 4*" " + "\033[96m" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
     print 42*"\033[1;96m="
