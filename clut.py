@@ -291,7 +291,7 @@ def crack_nam():
     try:
             print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;97mupil.pilek. \033[1;97mdll'
             c = raw_input('\033[1;96m[+] \x1b[1;93mUsername : \033[1;31m ')
-            print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
+            print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil123'
             pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
             pass2 = raw_input('\033[1;96m[2] \033[1;93mPassword : \033[1;31m ')
             pass3 = raw_input('\033[1;96m[3] \033[1;93mPassword : \033[1;31m ')
@@ -309,7 +309,7 @@ def crack_nam():
         menu()
 
     xxx = str(len(id))
-    jalan('\033[1;96m[+] \x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
+    jalan('\033[1;96m[+] \x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;97m ' + xxx)
     time.sleep(1)
     titik = ['.   ', '..  ', '... ']
     for o in titik:
@@ -441,8 +441,8 @@ def crack_nam():
     p = ThreadPool(30)
     p.map(main, id)
     print 42*"\033[1;96m="
-    print '\033[1;96m[✓] \x1b[1;97mCrack Selesai ....'
-    print '\033[1;96m[✓] \x1b[1;97mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
+    print '\033[1;96m[✓] \x1b[1;93mCrack Selesai ....'
+    print '\033[1;96m[✓] \x1b[1;93mTotal \x1b[1;34mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;34m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
     print '\033[1;96m[✓] \x1b[1;97mCP/OK tersimpan : save/usernam.txt'
     print 42*"\033[1;96m="
     raw_input('\x1b[1;97m[\x1b[1;92m KEMBALI \x1b[1;97m]')
@@ -687,10 +687,10 @@ def crack_ident():
     print
     print 42*"\033[1;96m="
     try:
-        print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;31m 1000001 1000002 1000012 1000023 dst 😂'
+        print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;97m 1000001 1000002 1000012 1000023 dst'
         print '\033[1;96m[+] \033[1;97KHUSUS 15digit...semoga beruntung!!!!!'
-        c = raw_input('\033[1;96m[+] \x1b[1;34mID Depan : \033[1;31m ')
-        print '\033[1;96m[+] \033[1;93mContoh password : \033[1;96msayang jembot dst 😂'
+        c = raw_input('\033[1;96m[+] \x1b[1;93mID Depan : \033[1;31m ')
+        print '\033[1;96m[+] \033[1;93mContoh password : \033[1;97msayang jembot dst'
         pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
         pass2 = raw_input('\033[1;96m[2] \033[1;93mPassword : \033[1;31m ')
         pass3 = raw_input('\033[1;96m[3] \033[1;93mPassword : \033[1;31m ')
@@ -706,7 +706,7 @@ def crack_ident():
         menu()
 
     xxx = str(len(id))
-    jalan('\033[1;96m[+] \x1b[1;93mTotal ID \x1b[1;97m:\x1b[1;92m ' + xxx)
+    jalan('\033[1;96m[+] \x1b[1;93mTotal ID \x1b[1;97m:\x1b[1;97m ' + xxx)
     time.sleep(1)
     titik = ['.   ', '..  ', '... ']
     for o in titik:
@@ -808,8 +808,8 @@ def crack_ident():
     p = ThreadPool(30)
     p.map(main, id)
     print 42*"\033[1;96m="
-    print '\033[1;96m[✓] \x1b[1;97mCrack Selesai ....'
-    print '\033[1;96m[✓] \x1b[1;97mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
+    print '\033[1;96m[✓] \x1b[1;93mCrack Selesai ....'
+    print '\033[1;96m[✓] \x1b[1;93mTotal \x1b[1;34mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;34m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
     print '\033[1;96m[✓] \x1b[1;97mCP/OK tersimpan : save/userid.txt'
     print 42*"\033[1;96m="
     raw_input('\x1b[1;97m[\x1b[1;92m KEMBALI \x1b[1;97m]')
@@ -1295,6 +1295,7 @@ def crack_email():
     os.system('clear')
     print logo
     print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK EMAIL FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
+    print
     print 42*"\033[1;96m="
     try:
         print ('\033[1;96m[+] \033[1;93mContoh : \033[1;31mupil \033[1;31mupil_ \033[1;31mupil.pilek \033[1;31mdll')
@@ -1319,9 +1320,7 @@ def crack_email():
         menu()
 
     xxx = str(len(id))
-    jalan('\033[1;96m[+] \x1b[1;93mTotal Email \x1b[1;97m:\x1b[1;92m ' + xxx)
-    time.sleep(1)
-    jalan("\033[1;96m[!] \x1b[1;93mJangan Keluar")
+    jalan('\033[1;96m[+] \x1b[1;93mTotal Email \x1b[1;97m:\x1b[1;97m ' + xxx)
     time.sleep(1)
     titik = ['.   ', '..  ', '... ']
     for o in titik:
@@ -1454,8 +1453,8 @@ def crack_email():
     p = ThreadPool(30)
     p.map(main, id)
     print 42*"\033[1;96m="
-    print '\033[1;96m[✓] \x1b[1;97mCrack Selesai ....'
-    print '\033[1;96m[✓] \x1b[1;97mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
+    print '\033[1;96m[✓] \x1b[1;93mCrack Selesai ....'
+    print '\033[1;96m[✓] \x1b[1;93mTotal \x1b[1;34mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;34m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
     print '\033[1;96m[✓] \x1b[1;97mCP/OK tersimpan : save/email.txt'
     print 42*"\033[1;96m="
     raw_input('\x1b[1;97m[\x1b[1;92m Kembali \x1b[1;97m]')
