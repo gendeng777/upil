@@ -284,7 +284,8 @@ def tokenz():
 def nope():
 	os.system('clear')
 	print logo
-	print
+	print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK NOMOR FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
+	print 42*"\033[1;96m="
 	print 42*"\033[1;96m="
 	print '\033[1;96m[1] \033[1;93mBangladesh'
 	print '\033[1;96m[2] \033[1;93mIndia'
@@ -512,7 +513,9 @@ def action():
 
 def crack_email():
     os.system('clear')
-    print (logo)
+    print logo
+    print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK EMAIL FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
+    print 42*"\033[1;96m="
     try:
         print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil \033[1;93mupil_ \033[1;31mupil.pilek \033[1;96dll'
         c = raw_input('\033[1;96m[+] \x1b[1;34mNama Target : \033[1;31m ')
@@ -682,7 +685,8 @@ def crack_email():
 def crack_nam():
     os.system('clear')
     print (logo)
-    print (\033[1;96m[
+    print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK USERNAME FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
+    print 42*"\033[1;96m="
     try:
         print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;31mupil.pilek. \033[1;96dll'
         c = raw_input('\033[1;96m[+] \x1b[1;34mUsername : \033[1;31m ')
@@ -846,7 +850,9 @@ def crack_nam():
 
 def crack_ident():
     os.system('clear')
-    print (logo)
+    print logo
+    print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK IDENTITAS FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
+    print 42*"\033[1;96m="
     try:
         print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;96m 1000001 1000002 1000012 1000023 dst 😂'
         print '\033[1;96m[+] \033[1;97KHUSUS 15digit...semoga beruntung!!!!!'
