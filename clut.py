@@ -309,7 +309,7 @@ def crack_nam():
         menu()
 
     xxx = str(len(id))
-    jalan('\033[1;96m[+]\x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
+    jalan('\033[1;96m[+] \x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
     time.sleep(1)
     titik = ['.   ', '..  ', '... ']
     for o in titik:
@@ -706,7 +706,7 @@ def crack_ident():
         menu()
 
     xxx = str(len(id))
-    jalan('\033[1;96m[+]\x1b[1;93mTotal ID \x1b[1;97m:\x1b[1;92m ' + xxx)
+    jalan('\033[1;96m[+] \x1b[1;93mTotal ID \x1b[1;97m:\x1b[1;92m ' + xxx)
     time.sleep(1)
     titik = ['.   ', '..  ', '... ']
     for o in titik:
@@ -1319,7 +1319,7 @@ def crack_email():
         menu()
 
     xxx = str(len(id))
-    jalan('\033[1;96m[+]\x1b[1;93mTotal Email \x1b[1;97m:\x1b[1;92m ' + xxx)
+    jalan('\033[1;96m[+] \x1b[1;93mTotal Email \x1b[1;97m:\x1b[1;92m ' + xxx)
     time.sleep(1)
     jalan("\033[1;96m[!] \x1b[1;93mJangan Keluar")
     time.sleep(1)
