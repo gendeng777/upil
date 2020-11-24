@@ -311,7 +311,7 @@ def crack_nam():
         jalan('\033[1;96m[+]\x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
         time.sleep(1)
         titik = ['.   ', '..  ', '... ']
-            for o in titik:
+        for o in titik:
             print '\r\033[1;96m[+] \033[1;93mProses Sedang Berlangsung ' + o,
             sys.stdout.flush()
             time.sleep(1)
