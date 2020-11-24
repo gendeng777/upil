@@ -55,7 +55,7 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,ge
 os.system('rm -rf .txt')
 for n in range(3000):
 
-    nmbr = random.randint(0, 999)
+    nmbr = random.randint(0, 9999)
     
     sys.stdout = open('..txt', 'a')
 
@@ -848,7 +848,7 @@ def crack_ident():
     print logo
     try:
         print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;96m 1000001 1000002 1000012 1000023 dst 😂'
-        print '\033[1;96m[+] \033[1;97KHUSUS 15digit...semoga beruntung!!!!!
+        print '\033[1;96m[+] \033[1;97KHUSUS 15digit...semoga beruntung!!!!!'
         c = raw_input('\033[1;96m[+] \x1b[1;34mID Depan : \033[1;31m ')
         print '\033[1;96m[+] \033[1;93mContoh password : \033[1;96msayang jembot dst 😂'
         pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
