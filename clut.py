@@ -302,10 +302,10 @@ def crack_nam():
             for line in open(idlist, 'r').readlines():
                 id.append(line.strip())
 
-        except IOError:
-            print '[!] Ora Ono '
-            raw_input('\n[ Kembali ]')
-            menu()
+    except IOError:
+        print '[!] Ora Ono '
+        raw_input('\n[ Kembali ]')
+        menu()
 
         xxx = str(len(id))
         jalan('\033[1;96m[+]\x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
