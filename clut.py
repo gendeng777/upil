@@ -169,7 +169,8 @@ def login():
 	time.sleep(0.05)
 	print "\033[1;96m[3] \033[1;93mCrack FB \033[1;93mUser Name \033[1;93mTanpa login fb  "
 	time.sleep(0.05)
-	print "\033[1;96m[4] \033[1;93mCrack FB \033[1;93mUser ID \033[1;93mTanpa login fb => \033[1;31mJgn Di Coba Karena masih Sulit "
+	print "\033[1;96m[4] \033[1;93mCrack FB \033[1;93mUser ID \033[1;93mTanpa login fb  "
+	print "\033[1;31m [ Nomor 4 Jgn Di Coba Karena masih Sulit ]"
 	time.sleep(0.05)
 	print "\033[1;96m[5] \033[1;93mLogin Akun Facebook  "
         time.sleep(0.05)
