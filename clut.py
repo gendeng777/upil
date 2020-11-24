@@ -284,11 +284,11 @@ def tokenz():
 
 def crack_nam():
     os.system('clear')
+    print logo
     print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK USERNAME FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
     print 42*"\033[1;96m="
     try:
-            print
-            print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;31mupil.pilek. \033[1;96dll'
+            print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;31mupil.pilek. \033[1;96mdll'
             c = raw_input('\033[1;96m[+] \x1b[1;34mUsername : \033[1;31m ')
             print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
             pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
@@ -1291,13 +1291,13 @@ def pilih_mbf():
 
 def crack_email():
     os.system('clear')
+    print logo
     print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK EMAIL FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
     print 42*"\033[1;96m="
     try:
-        print
-        print ('\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil \033[1;93mupil_ \033[1;31mupil.pilek \033[1;96dll')
+        print ('\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil \033[1;93mupil_ \033[1;31mupil.pilek \033[1;96mdll')
         c = raw_input('\033[1;96m[+] \x1b[1;34mNama Target : \033[1;31m ')
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;31m@yahoo.com,\033[1;34@gmail.com \033[1;96dll'
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;31m@yahoo.com,\033[1;34@gmail.com \033[1;96mdll'
         k = raw_input('\033[1;96m[+] \033[1;34mDomain Email :\033[1;97m ')
         print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
         pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
