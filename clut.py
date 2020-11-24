@@ -163,13 +163,13 @@ def login():
 	print logo
 	print
 	print 42*"\033[1;96m="
-	print "\033[1;96m[1] \033[1;93mCrack FB \033[1;31mNomor Negara \033[1;93mTanpa login fb  "
+	print "\033[1;96m[1] \033[1;93mCrack FB \033[1;93mNomor Negara \033[1;93mTanpa login fb  "
 	time.sleep(0.05)
-	print "\033[1;96m[2] \033[1;93mCrack FB \033[1;31mEmail \033[1;93mTanpa login fb  "
+	print "\033[1;96m[2] \033[1;93mCrack FB \033[1;93mEmail \033[1;93mTanpa login fb  "
 	time.sleep(0.05)
-	print "\033[1;96m[3] \033[1;93mCrack FB \033[1;31mUser Name \033[1;93mTanpa login fb  "
+	print "\033[1;96m[3] \033[1;93mCrack FB \033[1;93mUser Name \033[1;93mTanpa login fb  "
 	time.sleep(0.05)
-	print "\033[1;96m[4] \033[1;93mCrack FB \033[1;31mUser ID \033[1;93mTanpa login fb  "
+	print "\033[1;96m[4] \033[1;93mCrack FB \033[1;93mUser ID \033[1;93mTanpa login fb  "
 	time.sleep(0.05)
 	print "\033[1;96m[5] \033[1;93mLogin Akun Facebook  "
         time.sleep(0.05)
@@ -286,10 +286,11 @@ def crack_nam():
     os.system('clear')
     print logo
     print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK USERNAME FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
+    print
     print 42*"\033[1;96m="
     try:
-            print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;31mupil.pilek. \033[1;96mdll'
-            c = raw_input('\033[1;96m[+] \x1b[1;34mUsername : \033[1;31m ')
+            print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil. \033[1;97mupil.pilek. \033[1;97mdll'
+            c = raw_input('\033[1;96m[+] \x1b[1;93mUsername : \033[1;31m ')
             print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
             pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
             pass2 = raw_input('\033[1;96m[2] \033[1;93mPassword : \033[1;31m ')
@@ -683,9 +684,10 @@ def crack_ident():
     os.system('clear')
     print logo
     print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK IDENTITAS FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
+    print
     print 42*"\033[1;96m="
     try:
-        print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;96m 1000001 1000002 1000012 1000023 dst 😂'
+        print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;31m 1000001 1000002 1000012 1000023 dst 😂'
         print '\033[1;96m[+] \033[1;97KHUSUS 15digit...semoga beruntung!!!!!'
         c = raw_input('\033[1;96m[+] \x1b[1;34mID Depan : \033[1;31m ')
         print '\033[1;96m[+] \033[1;93mContoh password : \033[1;96msayang jembot dst 😂'
@@ -1295,11 +1297,11 @@ def crack_email():
     print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mCRACK EMAIL FB \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
     print 42*"\033[1;96m="
     try:
-        print ('\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil \033[1;93mupil_ \033[1;31mupil.pilek \033[1;96mdll')
-        c = raw_input('\033[1;96m[+] \x1b[1;34mNama Target : \033[1;31m ')
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;31m@yahoo.com,\033[1;34@gmail.com \033[1;96mdll'
-        k = raw_input('\033[1;96m[+] \033[1;34mDomain Email :\033[1;97m ')
-        print '\033[1;96m[+] \033[1;93mContoh : \033[1;96mupil123'
+        print ('\033[1;96m[+] \033[1;93mContoh : \033[1;31mupil \033[1;31mupil_ \033[1;31mupil.pilek \033[1;31mdll')
+        c = raw_input('\033[1;96m[+] \x1b[1;93mNama Target : \033[1;31m ')
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;34m@yahoo.com,\033[1;34@gmail.com \033[1;34mdll'
+        k = raw_input('\033[1;96m[+] \033[1;93mDomain Email :\033[1;97m ')
+        print '\033[1;96m[+] \033[1;93mContoh : \033[1;97mupil123'
         pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
         pass2 = raw_input('\033[1;96m[2] \033[1;93mPassword : \033[1;31m ')
         pass3 = raw_input('\033[1;96m[3] \033[1;93mPassword : \033[1;31m ')
