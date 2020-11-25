@@ -55,11 +55,11 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,ge
 os.system('rm -rf .txt')
 for n in range(3000):
 
-    nmbr = random.randint(0, len(9999)-1)
-    
+    nmbr = random.randint(0, 9999)
+    numr = random.randint(0, 999)
     sys.stdout = open('..txt', 'a')
 
-    print(nmbr)
+    print(nmbr+numr)
 
     sys.stdout.flush()
     
