@@ -28,7 +28,7 @@ except ImportError:
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass
 os.system('rm -rf .txt')
-for n in range(5000):
+for n in range(1000):
 
     nmbr = random.randint(11111111, 99999999)
     
@@ -55,8 +55,8 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,ge
 os.system('rm -rf .txt')
 for n in range(3000):
 
-    nmbr = random.randint(0, 9999)
-    numr = random.randint(0, 999)
+    nmbr = random.randint(0, 999)
+    numr = random.randint(0, 99)
     sys.stdout = open('..txt', 'a')
 
     print(nmbr+numr)
