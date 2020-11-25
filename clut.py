@@ -1013,6 +1013,21 @@ def pilih_mbf():
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
+		print 42*"\033[1;96m="
+		idt = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
+		try:
+			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama teman\033[1;91m :\033[1;97m "+op["name"]
+		except KeyError:
+			print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
+			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+			mbf()
+		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
+		z = json.loads(r.text)
+		for i in z['data']:
+			id.append(i['id'])
 	elif peak =="0":
 		menu()
 	else:
