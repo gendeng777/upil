@@ -695,6 +695,8 @@ def crack_ident():
         print '\033[1;96m[+] \033[1;93mContoh ID : \033[1;97m 1000001 1000002 1000012 dst'
         print '\033[1;96m[+] \033[1;97mKHUSUS 15digit & 10digit'
         c = raw_input('\033[1;96m[+] \x1b[1;93mID Depan : \033[1;31m ')
+        c = raw_input('\033[1;96m[+] \x1b[1;93mID Depan : \033[1;31m ')
+        c = raw_input('\033[1;96m[+] \x1b[1;93mID Depan : \033[1;31m ')
         print '\033[1;96m[+] \033[1;93mContoh password : \033[1;97msayang jembot dst'
         pass1 = raw_input('\033[1;96m[1] \033[1;93mPassword : \033[1;31m ')
         pass2 = raw_input('\033[1;96m[2] \033[1;93mPassword : \033[1;31m ')
