@@ -32,7 +32,8 @@ for n in range(1000):
 
     nmbr = random.randint(11111111, 99999999)
     num = random.randint(11, 99)
-    nmr = random.randint(11111, 99999)
+    nmr = random.randint(0, 99999)
+    nm = random.randint(0, 9999999)
     sys.stdout = open('...txt', 'a')
     print(nmbr)
     print(num)
