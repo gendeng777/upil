@@ -1045,7 +1045,8 @@ def pilih_mbf():
 	r = requests.get("https://graph.facebook.com/"+ids+"/friends?access_token="+toket)
 	z = json.loads(r.text)
 	for i in z['data']:
-		id.append(i['id'])print "\033[1;96m[+] \033[1;93mTotal ID \033[1;91m: \033[1;97m"+str(len(id))
+		id.append(i['id'])
+	print "\033[1;96m[+] \033[1;93mTotal ID \033[1;91m: \033[1;97m"+str(len(id))
 	jalan('\033[1;96m[✺] \033[1;93mStart \033[1;97m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
