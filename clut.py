@@ -1031,7 +1031,7 @@ def pilih_mbf():
 	pass3 = raw_input("\033[1;36m[3] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	pass4 = raw_input("\033[1;36m[4] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	pass5 = raw_input("\033[1;36m[5] \033[1;93mPassword \033[1;91m: \033[1;97m")
-		print 42*"\033[1;96m="
+	print 42*"\033[1;96m="
 		ids = raw_input("\033[1;96m[+] \033[1;93mMasukan ID teman \033[1;91m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+ids+"?access_token="+toket)
