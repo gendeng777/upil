@@ -57,10 +57,11 @@ for n in range(3000):
 
     nmbr = random.randint(0, 999)
     numr = random.randint(0, 99)
+    ang = random.randint(0, 9999)
     sys.stdout = open('..txt', 'a')
-
-    print(nmbr+numr)
-
+    print(nmbr)
+    print(numr)
+    print(ang)
     sys.stdout.flush()
     
 try:
