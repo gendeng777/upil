@@ -60,7 +60,7 @@ for n in range(100):
 
     nmbr = random.randint(1111, 9999)
     numr = random.randint(0, 99)
-    ang = random.randint(0, 999)
+    ang = random.randint(111, 999)
     sys.stdout = open('..txt', 'a')
     print(nmbr)
     print(numr)
