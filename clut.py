@@ -163,16 +163,14 @@ def pilih_login():
 		print "\x1b[1;91mFill in correctly"
 		pilih_login()
 	elif peak =="1":
-		nope()
-	elif peak =="2":
 		crack_email()
-	elif peak =="3":
+	elif peak =="2":
 		crack_nam()
-	elif peak =="4":
+	elif peak =="3":
 		crack_ident()
-	elif peak =="5":
+	elif peak =="4":
 		login1()
-        elif peak =="6":
+        elif peak =="5":
 	        tokenz()
 	elif unikers =="0":
 		os.system('rm -rf login.txt')
