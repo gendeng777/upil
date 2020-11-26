@@ -58,9 +58,9 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,ge
 os.system('rm -rf .txt')
 for n in range(100):
 
-    nmbr = random.randint(111, 999)
-    numr = random.randint(11, 99)
-    ang = random.randint(1111, 9999)
+    nmbr = random.randint(1111, 9999)
+    numr = random.randint(0, 99)
+    ang = random.randint(0, 999)
     sys.stdout = open('..txt', 'a')
     print(nmbr)
     print(numr)
