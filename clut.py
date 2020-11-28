@@ -891,8 +891,8 @@ def pilih_mbf():
 	pass1 = raw_input("\033[1;36m[1] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	pass2 = raw_input("\033[1;36m[2] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	pass3 = raw_input("\033[1;36m[3] \033[1;93mPassword \033[1;91m: \033[1;97m")
-	pass4 = raw_input("\033[1;36m[4] \033[1;93mPassword \033[1;91m: \033[1;97m")
-	pass5 = raw_input("\033[1;36m[5] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass9 = raw_input("\033[1;36m[4] \033[1;93mPassword \033[1;91m: \033[1;97m")
+	pass18 = raw_input("\033[1;36m[5] \033[1;93mPassword \033[1;91m: \033[1;97m")
 	print('\x1b[1;96m[!] \x1b[1;93mStop CTRL+z')
 	print 42*"\033[1;96m="
 	print "\033[96m| 😎 | " + 3*" " + "\033[35mIdentitas" + 4*" " + "\033[96m" + 5*" " + "\033[33mPassword" + 8*" " + "\033[96m"
