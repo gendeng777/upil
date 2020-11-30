@@ -133,32 +133,6 @@ def tokenz():
 		print "\033[1;96m[!] \033[1;31mSalah"
 
 
-def menu():
-	os.system('clear')
-	try:
-		toket=open('login.txt','r').read()
-	except IOError:
-		os.system('clear')
-		print"\033[1;96m[!] \x1b[1;91mToken invalid"
-		os.system('rm -rf login.txt')
-		time.sleep(1)
-		login()
-	try:
-		otw = requests.get('https://web.facebook.com/login.php?login_attempt=1'
-		a = json.loads(otw.text)
-		nama = a['name']
-		id = a['id']
-	except KeyError:
-		os.system('clear')
-		print"\033[1;96m[!] \033[1;91mSepertinya akun anda kena checkpoint"
-		os.system('rm -rf login.txt')
-		time.sleep(1)
-		login()
-	except requests.exceptions.ConnectionError:
-		print"\033[1;96m[!] \x1b[1;91mTidak ada koneksi"
-		keluar()
-
-
 os.system('clear')
 print logo
 print "\033[1;96m    \033[1;93m◆\033[1;31m ⃟ ⃟ \033[1;34m░▒▓ \033[1;93mFACEBOOK CRACKER \033[1;34m▓▒░\033[1;31m ⃟ ⃟ \033[1;93m◆     \033[1;96m"
